@@ -2,9 +2,7 @@
 
 ver 0.1
 
-## By
-
-Bryan Bird 🐦 & Cailean Finn 🦊
+Developers: Bryan Bird 🐦 & Cailean Finn 🦊
 
 ## About
 
