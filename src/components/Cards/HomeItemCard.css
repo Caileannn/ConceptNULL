@@ -1,0 +1,110 @@
+.item-cardContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+.item-card {
+    width: 100%;
+    border-radius: 30px;
+    margin: 0rem 3rem 0rem 3rem;
+    text-align: center;
+    
+}
+
+.item-card p {
+    padding: 0rem .8rem 0rem .8rem;
+    margin-bottom: 1rem;
+    color: #598a4c;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    width: auto;
+    text-align: justify;
+}
+
+.item-card h1 {
+    color: #598a4c;
+    font-weight: 400;
+}
+
+.item-card h2 {
+    color: #598a4c;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.item-card-img {
+    width: 100%;
+    height: auto;
+    max-height: 290px;
+    object-fit: cover;
+}
+
+.item-card-button {
+    padding: .7rem 3rem .7rem 3rem;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: #598a4c solid 3px;
+    color: #598a4c;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .item-card {
+        margin: 0rem;
+    }
+    .item-card p {
+        -webkit-line-clamp: 10;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1800px) {
+    .item-card {
+        margin: 1rem;
+    }
+    .item-card p {
+        -webkit-line-clamp: 12;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .item-cardContainer {}
+    .item-card {
+        margin: 1rem .7rem 1rem .7rem;
+    }
+    .item-card p {
+        padding: 0rem .5rem 0rem .5rem;
+        -webkit-line-clamp: 12;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .item-cardContainer {
+        margin: 0;
+    }
+    .item-card {
+        margin: 1rem 0 0 0;
+    }
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    transform: scale(1.1);
+    cursor: pointer;
+}

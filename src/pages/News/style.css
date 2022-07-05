@@ -1,0 +1,18 @@
+.news-cont {
+    flex-direction: column;
+    text-align: start;
+}
+
+.news-cont>* {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.news-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,450px), 1fr));
+    grid-gap: 2rem 2rem;
+    margin-top: 3rem;
+}
+

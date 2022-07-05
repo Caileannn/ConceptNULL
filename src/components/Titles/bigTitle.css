@@ -1,0 +1,23 @@
+.bigTitle {
+    color: black;
+    font-size: calc(3em + 1vw);
+    text-transform: uppercase;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: 700;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Libre+Baskerville:wght@700&display=swap');
+
+@media screen and (max-width: 320px){
+    .bigTitle{
+       
+    
+        font-size: calc(2.5em + 1vw);
+
+     
+    }
+}
+    

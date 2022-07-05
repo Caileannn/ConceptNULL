@@ -1,0 +1,119 @@
+.about-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title title " "header header" "p p";
+    margin-top: 5%;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+    margin-top: 1rem;
+    grid-area: header;
+}
+
+.about-header>* {
+    flex: 1;
+}
+
+.about-header-paragraph {
+    font-size: 20px;
+    padding-right: 3rem;
+    text-align: justify;
+    color: black;
+}
+
+.about-header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-cont-title {
+    grid-area: title;
+    text-align: left;
+}
+
+.about-content {
+    grid-area: p;
+    margin-top: 1rem;
+}
+
+.about-content .about-header-paragraph {
+}
+
+.about-header-paragraph h1, .about-header-paragraph h2, .about-header-paragraph h3, .about-header-paragraph h4,.about-header-paragraph h5, .about-header-paragraph h6 {
+    color: black;
+}
+
+@media screen and (max-width: 1600px) {
+   
+    .about-image {
+        max-height: 450px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .about-header{
+        flex-direction: column-reverse;
+    }
+    .about-header-paragraph {
+        padding-right: 0;
+        padding-left: 0;
+    }
+   
+}
+
+@media screen and (max-width: 425px) {
+    
+    .about-cont {
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+    .about-cont .bigTitle{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .about-cont .about-header-content{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .about-cont .about-content{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .about-image{
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    
+    .about-cont .bigTitle{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .about-cont .about-header-content{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .about-cont .about-content{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+}

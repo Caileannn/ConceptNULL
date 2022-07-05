@@ -1,0 +1,30 @@
+
+.link{
+    color: #4c863e;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,300&family=Libre+Baskerville:wght@700&display=swap');

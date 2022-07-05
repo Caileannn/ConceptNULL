@@ -1,0 +1,42 @@
+{
+  "About": {
+    "intro":[
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maxime deleniti corporis magni perferendis, ipsa nobis cupiditate recusandae quibusdam adipisci voluptatibus aperiam aut rerum laborum eveniet, aspernatur fugit veritatis minus modi exercitationem. Blanditiis provident soluta, eos labore laudantium quis veniam repudiandae doloremque tempora in consectetur alias! Incidunt vel quas facere nulla atque delectus velit, commodi sit dolore voluptate vitae repellendus.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maxime deleniti corporis magni perferendis, ipsa nobis cupiditate recusandae quibusdam adipisci voluptatibus aperiam aut rerum laborum eveniet, aspernatur fugit veritatis minus modi exercitationem. Blanditiis provident soluta, eos labore laudantium quis veniam repudiandae doloremque tempora in consectetur alias! Incidunt vel quas facere nulla atque delectus velit, commodi sit dolore voluptate vitae repellendus."
+    ],
+    "content":[
+      {
+        "title":"Lorem ipsum dolor sit amet",
+        "paragraph":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis soluta esse architecto sed fugiat eveniet recusandae iusto nobis unde debitis odio aliquam corporis alias minima inventore ut vero enim dolores atque molestias consequatur doloremque, placeat neque? Blanditiis explicabo assumenda ad."
+      },
+      {
+        "title":"Lorem ipsum dolor sit amet",
+        "paragraph":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis soluta esse architecto sed fugiat eveniet recusandae iusto nobis unde debitis odio aliquam corporis alias minima inventore ut vero enim dolores atque molestias consequatur doloremque, placeat neque? Blanditiis explicabo assumenda ad."
+      }
+    ]
+  },
+  "Faq": [
+    {
+      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus eleifend leo vel gravida. Donec efficitur pretium lectus. Sed mollis, augue vitae congue sollicitudin, dolor massa euismod odio, id condimentum ex purus id tellus. Nunc lacinia interdum quam non suscipit. Integer efficitur tellus sem, a luctus augue finibus sed. Suspendisse potenti. Etiam commodo libero ut felis ultrices suscipit. Mauris egestas erat turpis, non lacinia eros condimentum vel. Mauris laoreet arcu lorem, eu ornare nulla rutrum eu."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus eleifend leo vel gravida. Donec efficitur pretium lectus. Sed mollis, augue vitae congue sollicitudin, dolor massa euismod odio, id condimentum ex purus id tellus. Nunc lacinia interdum quam non suscipit. Integer efficitur tellus sem, a luctus augue finibus sed. Suspendisse potenti. Etiam commodo libero ut felis ultrices suscipit. Mauris egestas erat turpis, non lacinia eros condimentum vel. Mauris laoreet arcu lorem, eu ornare nulla rutrum eu."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus eleifend leo vel gravida. Donec efficitur pretium lectus. Sed mollis, augue vitae congue sollicitudin, dolor massa euismod odio, id condimentum ex purus id tellus. Nunc lacinia interdum quam non suscipit. Integer efficitur tellus sem, a luctus augue finibus sed. Suspendisse potenti. Etiam commodo libero ut felis ultrices suscipit. Mauris egestas erat turpis, non lacinia eros condimentum vel. Mauris laoreet arcu lorem, eu ornare nulla rutrum eu."
+    },
+    {
+      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus eleifend leo vel gravida. Donec efficitur pretium lectus. Sed mollis, augue vitae congue sollicitudin, dolor massa euismod odio, id condimentum ex purus id tellus. Nunc lacinia interdum quam non suscipit. Integer efficitur tellus sem, a luctus augue finibus sed. Suspendisse potenti. Etiam commodo libero ut felis ultrices suscipit. Mauris egestas erat turpis, non lacinia eros condimentum vel. Mauris laoreet arcu lorem, eu ornare nulla rutrum eu."
+    }
+  ],
+  "SocialMedia":{
+    "instagram":"https://www.instagram.com/fioruildao/",
+    "twitter":"https://twitter.com/FioruilIDAO",
+    "facebook":"https://www.facebook.com/",
+    "email":"fioruildao@gmail.com"
+  }
+}

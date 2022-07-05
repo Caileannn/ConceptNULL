@@ -1,0 +1,132 @@
+.home-cont {
+    display: block;
+    text-align: center;
+}
+
+.home-articles {
+    grid-area: articles;
+    flex-direction: column;
+    display: flex;
+}
+
+.home-marketItems {
+    grid-area: items;
+    display: flex;
+}
+
+.home-articles-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-area: links;
+}
+
+.home-img {
+    width: 100%;
+    max-height: 350px;
+    margin: 0 auto;
+    padding: 1rem;
+    filter: brightness(.7);
+    object-fit: cover;
+}
+
+.home-linkSepartator {
+    width: 4px;
+    height: 50px;
+    background-color: #598a4c;
+}
+
+.home-title{
+    text-align: center;
+    justify-content: center;
+    padding-top: 10rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+    
+    
+}
+
+.heart {
+	animation: beat .20s infinite alternate;
+	transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.1); }
+}
+
+@media screen and (max-width: 1335px) and (min-width: 904px) {
+    .home-cont {
+        margin-left: 1rem!important;
+        margin-right: 1rem!important;
+    }
+}
+
+@media screen and (max-width: 904px) {
+    .home-cont {
+        display: grid!important;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "items" "links" "articles";
+        grid-gap: 2rem 4;
+    }
+    .home-marketItems {
+        grid-area: items;
+        display: flex;
+    }
+    .home-marketItems>* {
+        margin-left: 2rem!important;
+        margin-right: 2rem!important;
+    }
+}
+
+@media screen and (max-width: 646px) {
+    .home-marketItems {
+        grid-area: items;
+        display: flex;
+    }
+    .home-marketItems>* {
+        margin-left: 1rem!important;
+        margin-right: 1rem!important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .home-marketItems {
+        grid-area: items;
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 1rem 0rem 1rem;
+    }
+    .home-marketItems>* {
+        margin-left: 0rem!important;
+        margin-right: 0rem!important;
+    }
+    .home-articles{
+        margin-top: 2rem;
+    }
+    .home-articles-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .home-articles-links>* {
+        margin-top: 2rem;
+    }
+    .home-linkSepartator {
+        display: none;
+    }
+    .home-cont {
+        grid-gap: 0rem 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .home-marketItems {
+        padding: 0rem;
+    }
+}
