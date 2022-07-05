@@ -1,7 +1,5 @@
 # Fioruil DAO - Initial Website
 
-ver 0.1
-
 Developers: Bryan Bird 🐦 & Cailean Finn 🦊
 
 ## About
