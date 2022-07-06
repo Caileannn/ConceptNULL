@@ -1,36 +1,50 @@
 {
   "About": {
     "intro":[
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maxime deleniti corporis magni perferendis, ipsa nobis cupiditate recusandae quibusdam adipisci voluptatibus aperiam aut rerum laborum eveniet, aspernatur fugit veritatis minus modi exercitationem. Blanditiis provident soluta, eos labore laudantium quis veniam repudiandae doloremque tempora in consectetur alias! Incidunt vel quas facere nulla atque delectus velit, commodi sit dolore voluptate vitae repellendus.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maxime deleniti corporis magni perferendis, ipsa nobis cupiditate recusandae quibusdam adipisci voluptatibus aperiam aut rerum laborum eveniet, aspernatur fugit veritatis minus modi exercitationem. Blanditiis provident soluta, eos labore laudantium quis veniam repudiandae doloremque tempora in consectetur alias! Incidunt vel quas facere nulla atque delectus velit, commodi sit dolore voluptate vitae repellendus."
+      "Fioruil (meaning virtual) is a decentralised funding platform aimed at enabling artists of all descriptions to pursue projects they are passionate about.",
+      "At its core this project is about community. Bringing together lovers of all forms of expression to collaborate and support each other, whether they be musicians, digital artists, painters or just someone with a cool idea they want to bring to life and share.",
+      "Join us in connecting local artists with the global community and building something that makes a real difference"
     ],
     "content":[
       {
-        "title":"Lorem ipsum dolor sit amet",
-        "paragraph":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis soluta esse architecto sed fugiat eveniet recusandae iusto nobis unde debitis odio aliquam corporis alias minima inventore ut vero enim dolores atque molestias consequatur doloremque, placeat neque? Blanditiis explicabo assumenda ad."
+        "title":"The Problem",
+        "paragraph":["A major barrier for any budding artists in any medium is access to funds. As many projects are not profit driven, artists find it difficult to gather funding for works in progress relying on what money they can generate from sales once the works are complete. With even this being limited due to some mediums not being commercial",
+                    "Current funding supports and organisations are centralised in their nature and require significant paperwork time investment and deliverables which many are not able to meet. We would like to deviate from that structure and allow artists to actively engage, and most importantly be informed, across all stages of the funding process."]
+        
       },
       {
-        "title":"Lorem ipsum dolor sit amet",
-        "paragraph":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis soluta esse architecto sed fugiat eveniet recusandae iusto nobis unde debitis odio aliquam corporis alias minima inventore ut vero enim dolores atque molestias consequatur doloremque, placeat neque? Blanditiis explicabo assumenda ad."
+        "title":"The Solution",
+        "paragraph":["Fioruil will use community driven funding to support projects that are submitted by artists. The project will take on the structure of a Decentralised Autonomous organisation (DAO). Using Web3 technology, users will be able to support projects they wish to see created directly. ",
+                    "Instead of the decision if a project is funded or not for a specific award, being decided by a board or group of people from inside an organisation – in the instance of Fioruil, the community makes that decision.",
+                    "This model of funding will allow for a re-imagination of our engagement with the Arts and Culture sector. By fostering a community that is invested in the success and subsequent outcomes of projects that they have chosen to fund – it creates a relationship that is personal and at an individual level between members of the community who partake in decisions of this organisation and the chosen art practitioners. This model has the potential to offer a more sustainable future for the creative sector.",
+                    "This model of funding will allow for a re-imagination of our engagement with the Arts and Culture sector. By fostering a community that is invested in the success and subsequent outcomes of projects that they have chosen to fund – it creates a relationship that is personal and at an individual level between members of the community who partake in decisions of this organisation and the chosen art practitioners. This model has the potential to offer a more sustainable future for the creative sector."
+                    ]
+      },
+     {
+        "title":"How it Works",
+        "paragraph":["Fioruil looks to leverage new collaborative technology and the digital space to make a real impact in local communities. This platform will bring together all users and give them a voice to express their opinion and support local artists. The aim of which is to create a source of funding that takes a decentralised and open-source approach",
+                      "Think of it a Patreon of Projects. The Creators can share there ideas, the communitie can support them in bring it to life.",
+                      "At its core, Fioruil is a funding platform that will directly connect artisits with theri patreons."
+                    ]    
       }
     ]
   },
   "Faq": [
     {
-      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus eleifend leo vel gravida. Donec efficitur pretium lectus. Sed mollis, augue vitae congue sollicitudin, dolor massa euismod odio, id condimentum ex purus id tellus. Nunc lacinia interdum quam non suscipit. Integer efficitur tellus sem, a luctus augue finibus sed. Suspendisse potenti. Etiam commodo libero ut felis ultrices suscipit. Mauris egestas erat turpis, non lacinia eros condimentum vel. Mauris laoreet arcu lorem, eu ornare nulla rutrum eu."
+      "question": "Who Can Join?",
+      "answer": "Anyone! This project is designed to connect as many people as possible who want to connect and find support for their creative ideas."
     },
     {
-      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus eleifend leo vel gravida. Donec efficitur pretium lectus. Sed mollis, augue vitae congue sollicitudin, dolor massa euismod odio, id condimentum ex purus id tellus. Nunc lacinia interdum quam non suscipit. Integer efficitur tellus sem, a luctus augue finibus sed. Suspendisse potenti. Etiam commodo libero ut felis ultrices suscipit. Mauris egestas erat turpis, non lacinia eros condimentum vel. Mauris laoreet arcu lorem, eu ornare nulla rutrum eu."
+      "question": "Who Can Apply for Funding?",
+      "answer": "Anyone with a project they need help with. Initial Projects will be screened by the Founding team to ensure they meet our guidelines, before being published to the wider community for support."
     },
     {
-      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus eleifend leo vel gravida. Donec efficitur pretium lectus. Sed mollis, augue vitae congue sollicitudin, dolor massa euismod odio, id condimentum ex purus id tellus. Nunc lacinia interdum quam non suscipit. Integer efficitur tellus sem, a luctus augue finibus sed. Suspendisse potenti. Etiam commodo libero ut felis ultrices suscipit. Mauris egestas erat turpis, non lacinia eros condimentum vel. Mauris laoreet arcu lorem, eu ornare nulla rutrum eu."
+      "question": "How Can I Fund A Project",
+      "answer": "Projects can be funded through the platform by pledging a certain amount of tokens to any creator or idea you would like to support.These tokens will then be realised to the artist at the end of the funding period"
     },
     {
-      "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus eleifend leo vel gravida. Donec efficitur pretium lectus. Sed mollis, augue vitae congue sollicitudin, dolor massa euismod odio, id condimentum ex purus id tellus. Nunc lacinia interdum quam non suscipit. Integer efficitur tellus sem, a luctus augue finibus sed. Suspendisse potenti. Etiam commodo libero ut felis ultrices suscipit. Mauris egestas erat turpis, non lacinia eros condimentum vel. Mauris laoreet arcu lorem, eu ornare nulla rutrum eu."
+      "question": "What is a Blockchin, crypto or a DAO and why should I care?",
+      "answer": "These technologies are tools that powers Fioruil to democratize the funding of artists and their projects. But you dont need to be tech savy to take part! Everything you need to take part will be handle through out platform. If you would like to know more check out our educational resources "
     }
   ],
   "SocialMedia":{
