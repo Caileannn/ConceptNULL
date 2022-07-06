@@ -18,6 +18,7 @@
 }
 .faq-question > *{
     width: 70%;
+    font-style: italic;
 
 }
 .faq-answer{
@@ -27,6 +28,7 @@
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     color: #243b1e;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1224px){

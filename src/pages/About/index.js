@@ -17,10 +17,7 @@ export default function Index() {
           ))}
           {/*60-65 words*/}
         </div>
-        <img
-          className="about-image"
-          src="https://drive.google.com/file/d/17bKFjXAqxEWm2p_A5RY3TiSGSbGI27Lm/view?usp=sharing"
-        />
+        
       </div>
       <div className="about-content">
         <p className="about-header-paragraph">

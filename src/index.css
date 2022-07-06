@@ -7,7 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Ubuntu Mono', monospace;
   background-color: #53ff9b;
-  
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
