@@ -5,7 +5,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function instagram({ className, link,color,size="2x" }) {
   return (
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer" >
       {" "}
       <FontAwesomeIcon
         icon={faInstagram}
