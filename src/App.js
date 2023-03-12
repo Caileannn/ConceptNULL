@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./components/Navbar/index";
+import Newbar from "./components/Newbar/index";
 import Home from "./pages/Home";
 import Article from "./pages/Article";
 import News from "./pages/News";
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <Newbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="news">

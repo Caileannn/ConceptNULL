@@ -27,7 +27,7 @@ export default function Index() {
       <div className="home-title">
           <div className="home-textHeader">
           <h1>CONCEPT NULL</h1>
-          <h2>Newsletter</h2>
+          <h2>Newsletter Update</h2>
         </div>
       </div>
       <div className="home-summary-cont">

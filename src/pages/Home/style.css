@@ -48,6 +48,8 @@
 h1 {
     font-size: 3rem;
     font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.6rem;
 }
 
 h2{
@@ -68,7 +70,14 @@ h2{
     border-radius: 20px;
     background-color: white;
     padding: 20px;
+    margin-top: 50px;
 }
+
+.home-button button:hover{
+    
+    cursor: pointer;
+}
+
 
 .home-summary-text{
     font-size: 1.25rem;

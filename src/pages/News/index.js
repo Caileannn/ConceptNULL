@@ -34,12 +34,19 @@ export default function Index() {
   return (
     <Container className="news-cont">
       <BigTitle label="News" />
+      {/*
       <div className="news-items">
         {articlesVariable.map((article) => (
           <ArticleCard  article={article}/>
         ))}
       </div>
       {articlesVariable.length!= 0 && <Pagination items={articles} page={page} onChange={onChangePage} />}
+      */}
+
+      <div className="news-text">
+          <p>⚒️ Under Construction ⚒️</p>
+      </div>
+      
     </Container>
   );
 }

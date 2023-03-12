@@ -23,7 +23,7 @@ export default function Index() {
         <p className="about-header-paragraph">
           {content.map((item, index) => (
             <>
-            <h1>{item.title}</h1>
+            <h1 className="about-title">{item.title}</h1>
             <p key={index} className="about-header-paragraph">
               {item.paragraph}
             </p>
