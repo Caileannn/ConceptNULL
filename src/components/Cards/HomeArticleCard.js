@@ -24,7 +24,7 @@ export default function HomeArticleCard({article}) {
     <>
     <animated.div className="card" style={isLoading?{display:'none'}:{...styles}}>
       <div className="imgBx">
-        <img src={imagesUrl} onLoad={() => hideLoader()} />
+        <img src={imagesUrl} alt="description of image" onLoad={() => hideLoader()} />
       </div>
       <div className="contentBx">
         <div className="content">

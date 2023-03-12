@@ -30,7 +30,7 @@ export default function Input({ containerClass, className,setRealValue }) {
         value={value}
         onChange={(e) => onChangeSearch(e.target.value)}
       />
-      {value != "" && (
+      {value !== "" && (
         <FontAwesomeIcon
           icon={faTimes}
           color="#14390A"

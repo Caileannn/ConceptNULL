@@ -26,6 +26,7 @@ export default function ItemCard({ key, item }) {
           className="ItemCard-image"
           src={imageUrl}
           onLoad={() => hideLoader()}
+          alt="description of image"
         />
         <h2>{title}</h2>
         <div className="ItemCard-content">

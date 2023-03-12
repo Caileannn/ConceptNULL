@@ -6,6 +6,7 @@ export default function profileImage({url}) {
         <img
           className="article-profileImage"
           src={url}
+          alt="description of image"
         />
       <div className="contentBx">
       </div>

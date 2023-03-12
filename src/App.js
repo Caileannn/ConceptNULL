@@ -6,7 +6,6 @@ import News from "./pages/News";
 import About from "./pages/About";
 import Market from "./pages/Market/index";
 import Faq from './pages/Faq'
-import Footer from "./components/Footer/index";
 import Item from "./pages/Item/index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

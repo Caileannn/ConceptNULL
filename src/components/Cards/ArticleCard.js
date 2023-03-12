@@ -26,7 +26,7 @@ export default function ArticleCard({ article }) {
       <div className="Article-card">
         <Link to={id}>
           <div className="imgBx">
-            <img src={images[0].fields.file.url} onLoad={() => hideLoader()}/>
+            <img src={images[0].fields.file.url} alt="description of image" onLoad={() => hideLoader()}/>
           </div>
           <div className="contentBx">
             <div className="content">

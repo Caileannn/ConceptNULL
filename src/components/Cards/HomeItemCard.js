@@ -27,6 +27,7 @@ export default function HomeItemCard({ item }) {
           className="item-card-img"
           src={imageUrl}
           onLoad={() => hideLoader()}
+          alt="description of image"
         ></img>
         <h1>{title}</h1>
         <p>{description}</p>
