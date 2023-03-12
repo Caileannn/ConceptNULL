@@ -1,8 +1,10 @@
-# Fioruil DAO - Initial Website
+# ConceptNULL <2023>.
 
-Developers: Bryan Bird 🐦 & Cailean Finn 🦊
+Developer: Cailean Finn
 
 ## About
+
+<(insert summary of website/newsletter)>
 
 ## Tools
 
@@ -10,6 +12,3 @@ Front-end: React and Node.js
 
 Back-end: IPFS
 
-Smart Contract Development: Solidity/Hardhat
-
-Deployed on Polygon 🟪
