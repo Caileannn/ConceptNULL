@@ -2,12 +2,13 @@ import React from "react";
 import { BigTitle } from "../../components/Titles";
 import "./style.css";
 import Container from "../../components/container";
-import ArticleCard from "../../components/Cards/ArticleCard";
-import Pagination from "../Market/Components/Pagination";
-import { useEffect, useState } from "react";
-import { getArticles } from "../../api/Article";
+//import ArticleCard from "../../components/Cards/ArticleCard";
+//import Pagination from "../Market/Components/Pagination";
+//import { useEffect, useState } from "react";
+//import { getArticles } from "../../api/Article";
 export default function Index() {
-  const [articles, setArticles] = React.useState([]);
+
+  {/**const [articles, setArticles] = React.useState([]);
   const [articlesVariable,setArticlesVariable]= React.useState([]);
   const [page, setPage] = React.useState(1);
   useEffect(() => {
@@ -29,8 +30,9 @@ export default function Index() {
             setPage(page - 1);
             let a = page-1-1
             setArticlesVariable(articles.slice(a*6, (page-1) * 6));
-        }
-  };
+        }}; */}
+  
+  
   return (
     <Container className="news-cont">
       <BigTitle label="News" />
