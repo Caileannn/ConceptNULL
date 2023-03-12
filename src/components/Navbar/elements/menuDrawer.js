@@ -25,7 +25,7 @@ export default function MenuDrawer() {
           sx: {
             width: "33%",
             backgroundColor: "black",
-            opacity: "0.95",
+            opacity: "0.9",
             "@media(max-width: 768px)": {
               width: "50%",
             },
@@ -45,18 +45,11 @@ export default function MenuDrawer() {
               key={index}
               className="navbar-menuDrawer-link"
             >
-              <h2>{route.label}</h2>
+              <h2>{route.label}🡭</h2>
             </Link>
           ))}
           <div className="navbar-menuDrawer-social">
           <h3 >{App.SocialMedia.email} </h3>
-          <Twitter
-            size="lg"
-            className="navbar-iconBar"
-            color="white"
-            link={App.SocialMedia.twitter}
-
-          />
           <Instagram
             size="lg"
             color="white"
@@ -73,6 +66,7 @@ export default function MenuDrawer() {
 
 const routes = [
   { label: "Home", path: "/" },
+  { label: "News", path: "/news" },
   { label: "About", path: "/about" },
   { label: "F.A.Q", path: "/faq" },
 ];

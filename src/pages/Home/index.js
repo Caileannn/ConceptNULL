@@ -24,14 +24,22 @@ export default function Index() {
   return (
     <Container className="home-cont">
       
-        <div className="home-title">
-          <h1>🛠️ UNDER CONSTRUCTION 🛠️</h1>
-          <h2>We are building out our site atm </h2>
-          <br/><br/><br/><br/><br/>
-          <h1>Want to know more about <i>Fioruil</i> ?</h1>
-          <h2>Check out our Socials and About/FAQ page</h2>
-          <div class="heart"><h1>🖤</h1></div>
+      <div className="home-title">
+          <div className="home-textHeader">
+          <h1>CONCEPT NULL</h1>
+          <h2>Newsletter</h2>
         </div>
+      </div>
+      <div className="home-summary-cont">
+      <div className="home-summary-text">
+        <p>Morbi quis metus nec ex porta pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent vehicula porta tellus, semper placerat magna tristique a. Nulla tristique sapien felis, vel imperdiet neque interdum vel. Vestibulum non sapien quis dolor fringilla fringilla at ut massa. Pellentesque eu nunc sed tortor cursus porttitor ac sit amet dolor. Sed nisl nisl, sollicitudin non risus a, iaculis tempus erat. Vestibulum pulvinar convallis enim, ut efficitur libero. Sed mollis luctus tortor ut efficitur. Aliquam posuere leo nulla, non consequat augue dapibus quis. Phasellus porttitor sodales orci sed sodales. Integer eget nibh a nulla iaculis cursus et eget erat. Nulla id fringilla mauris.</p>
+      </div>
+      <div className="home-button">
+          <button>Sign-up 🡥</button>
+      </div>
+      </div>
+      
+      
       
     </Container>
   );
