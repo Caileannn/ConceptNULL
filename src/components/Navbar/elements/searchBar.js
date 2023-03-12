@@ -71,7 +71,7 @@ export default function SearchBar() {
               className="navbar-title"
               style={{ color: "white", textShadow: "none" }}
             >
-              Fioruil
+              Concept NULL
             </h1>
             <h1
               onClick={() => handleOpen()}

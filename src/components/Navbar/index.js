@@ -15,11 +15,6 @@ export default function Index() {
     <div className="navbar">
       <div className="navbar-header">
         <div className="navbar-links">
-          <Twitter
-            className="navbar-iconBar"
-            link={App.SocialMedia.twitter}
-            color="black"
-          />
           <Instagram
             className="navbar-iconBar"
             link={App.SocialMedia.instagram}
@@ -28,7 +23,7 @@ export default function Index() {
         </div>
         <div className="flogo">
           <Link to="/" style={{textDecoration:'none' }}>
-              <img src={flogo}></img>
+              <h1>ø</h1>
           </Link>
         </div>
         <div className="navbar-searchBarContainer">

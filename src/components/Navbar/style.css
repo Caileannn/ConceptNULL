@@ -19,6 +19,7 @@
 .navbar-links {
     flex: 1;
     padding-top: 1rem;
+    justify-content: center;
 }
 
 .navbar-header .navbar-links>* {
@@ -26,9 +27,12 @@
 }
 
 .navbar-header .navbar-searchBarContainer {
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items:baseline;
     flex: 1;
+    position: relative;
+    top: 15px;
+
 }
 
 .navbar-header .navbar-searchBarContainer>.navbar-connect, .navbar-header .navbar-searchBarContainer svg {
@@ -80,6 +84,14 @@
 
 .flogo{
     padding-top: 0rem;
+    margin-top: 0rem;
+    
+}
+
+.flogo h1{
+    color: black;
+    margin-top: 0;
+    font-style: italic;
 }
 
 @media (max-width: 425px) {
