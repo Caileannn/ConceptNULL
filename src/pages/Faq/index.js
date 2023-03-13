@@ -8,9 +8,12 @@ export default function index() {
   return (
     <Container className="faq-cont">
       <BigTitle label="F.A.Q" />
-        {App.Faq.map((item, index) => (
+      {/**
+       * {App.Faq.map((item, index) => (
             <FaqItem key={index} answer={item.answer} question={item.question}/>
         ))}
+       */}
+        
     </Container>
   );
 }

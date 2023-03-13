@@ -8,29 +8,32 @@ export default function Index() {
   return (
     <Container className="about-cont">
       <BigTitle label="About" className="about-cont-title" />
-      <div className="about-header">
+      {/**
+       * <div className="about-header">
         <div className="about-header-content">
           {intro.map((item, index) => (
             <p key={index} className="about-header-paragraph">
               {item}
             </p>
           ))}
-          {/*60-65 words*/}
+        60-65 words*
         </div>
         
-      </div>
-      <div className="about-content">
-        <p className="about-header-paragraph">
-          {content.map((item, index) => (
-            <>
-            <h1 className="about-title">{item.title}</h1>
-            <p key={index} className="about-header-paragraph">
-              {item.paragraph}
-            </p>
-            </>
-          ))}
-        </p>
-      </div>
+        </div>
+        <div className="about-content">
+          <p className="about-header-paragraph">
+            {content.map((item, index) => (
+              <>
+              <h1 className="about-title">{item.title}</h1>
+              <p key={index} className="about-header-paragraph">
+                {item.paragraph}
+              </p>
+              </>
+            ))}
+          </p>
+        </div>
+       */}
+      
     </Container>
   );
 }

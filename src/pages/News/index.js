@@ -44,10 +44,6 @@ export default function Index() {
       </div>
       {articlesVariable.length!= 0 && <Pagination items={articles} page={page} onChange={onChangePage} />}
       */}
-
-      <div className="news-text">
-          <p>(...)</p>
-      </div>
       
     </Container>
   );

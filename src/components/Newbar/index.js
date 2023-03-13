@@ -11,11 +11,11 @@ export default function Index() {
     <div className="nb-band">
         <div className="btn-band">
             <div className="btn-group">
-                <Link to="/news"><button>News&#x1F86D;</button></Link>
-                <Link to="/about"><button>About&#x1F86D;</button></Link>
-                <Link to="/" style={{textDecoration:'none' }}><button className="btn-symbol">ø</button></Link>
-                <Link to="/faq"><button>F.A.Q&#x1F86D;</button></Link> 
-                <Link to="/"><button>#&#x1F86D;</button></Link>
+                <Link to="/news"><div className="btn-nav">News&#x1F86D;</div></Link>
+                <Link to="/about"><div className="btn-nav">About&#x1F86D;</div></Link>
+                <Link to="/" style={{textDecoration:'none' }}><div className="btn-symbol">ø</div></Link>
+                <Link to="/faq"><div className="btn-nav">F.A.Q&#x1F86D;</div></Link> 
+                <Link to="/"><div className="btn-nav">#&#x1F86D;</div></Link>
             </div>
         </div>
     </div>
