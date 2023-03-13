@@ -91,6 +91,18 @@ h2{
     font-weight: 700;
 }
 
+.home-summary-text .hl-text{
+    color: rgb(255, 79, 79);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.home-summary-text .hl-text-2{
+    color: rgb(156, 113, 255);
+    font-weight: 500;
+    
+}
+
 
 /* Heart beat animation */
 @keyframes beat{

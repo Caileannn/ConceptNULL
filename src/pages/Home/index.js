@@ -32,7 +32,17 @@ export default function Index() {
       </div>
       <div className="home-summary-cont">
       <div className="home-summary-text">
-        <p>Morbi quis metus nec ex porta pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent vehicula porta tellus, semper placerat magna tristique a. Nulla tristique sapien felis, vel imperdiet neque interdum vel. Vestibulum non sapien quis dolor fringilla fringilla at ut massa. Pellentesque eu nunc sed tortor cursus porttitor ac sit amet dolor. Sed nisl nisl, sollicitudin non risus a, iaculis tempus erat. Vestibulum pulvinar convallis enim, ut efficitur libero. Sed mollis luctus tortor ut efficitur. Aliquam posuere leo nulla, non consequat augue dapibus quis. Phasellus porttitor sodales orci sed sodales. Integer eget nibh a nulla iaculis cursus et eget erat. Nulla id fringilla mauris.</p>
+        <p>Welcome to the <b>Concept NULL</b> newsletter!</p>
+        <p> We’re excited to welcome you to this little community we are building.</p>
+        <p>
+The aim of the newsletter is to create a repository of all artists in Ireland who might identify part or all their practice as <span className="hl-text">New Media art</span>, and to ‘join the dots’ between all the individuals and groups in Ireland who have been working, making and establishing this area over the last few decades in Ireland.
+But this should not be limited to artists. Any <span className="hl-text">technicians</span>, <span className="hl-text">researchers</span>, <span className="hl-text">creative coders</span>, or enthusiasts interested in the interdisciplinary nature of art and technology are sought for and welcomed.
+</p>
+<p>We’ll be putting in any <span className="hl-text-2">funding opportunities</span>, <span className="hl-text-2">open calls</span>, <span className="hl-text-2">residencies</span>, <span className="hl-text-2">workshops</span>, <span className="hl-text-2">events</span> and <span className="hl-text-2">online resources</span> that are applicable to new media artists and creative technologists. It will be sent out on the <b>1st of every month</b>. That’s it for now. 
+</p>
+<p>We encourage anyone to spread the word of the newsletter to anyone who may be interested in reading about this stuff and to share with us any opportunities that you think would fit the bill.
+</p>
+<p><u>You can sign-up below by filling out a short Google Form!</u></p>
       </div>
       <div className="home-button">
           <button>Sign-up <span className="span-uni-arrow">↗</span></button>
