@@ -14,6 +14,7 @@ a {
     border-radius: 40px;
     height: 80px;
     background-color: white;
+    border-color: black;
 
 }
 
@@ -21,6 +22,7 @@ button{
     text-decoration: none;
     color: black;
     font-family: 'IBM Plex Sans', sans-serif;
+    border-color: black;
 }
 
 .btn-group{
