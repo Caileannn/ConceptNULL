@@ -71,6 +71,7 @@ h2{
     background-color: white;
     padding: 20px;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .home-button button:hover{
@@ -127,6 +128,7 @@ h2{
     }
 }
 
+/*
 @media screen and (max-width: 425px) {
     .home-marketItems {
         grid-area: items;
@@ -155,8 +157,8 @@ h2{
         grid-gap: 0rem 0;
     }
 }
-
-@media screen and (max-width: 400px) {
+*/
+@media screen and (max-width: 500px) {
     .home-marketItems {
         padding: 0rem;
     }
@@ -186,3 +188,4 @@ h2{
         line-height: 20px;
     }
 }
+

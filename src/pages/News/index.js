@@ -46,7 +46,7 @@ export default function Index() {
       */}
 
       <div className="news-text">
-          <p>⚒️ Under Construction ⚒️</p>
+          <p>(...)</p>
       </div>
       
     </Container>

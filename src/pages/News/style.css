@@ -23,3 +23,9 @@
     text-align: center;
 }
 
+@media screen and (max-width: 900px) {
+    .news-text{
+        font-size: 1rem;
+    }
+}
+
