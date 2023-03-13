@@ -156,8 +156,33 @@ h2{
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
     .home-marketItems {
         padding: 0rem;
+    }
+
+    .home-title{
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1.6rem;
+        position: relative;
+        left: 10px;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    .home-summary-text p{
+        font-size: 0.9rem;
+        line-height: 20px;
     }
 }
