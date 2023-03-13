@@ -1,8 +1,6 @@
 .about-cont {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "title title " "header header" "p p";
+    display: flex;
+    flex-direction: column;
 }
 
 .about-title{
@@ -56,7 +54,7 @@
 
 .about-content {
     grid-area: p;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .about-content .about-header-paragraph {
@@ -70,6 +68,26 @@
 .about-header-paragraph h1, .about-header-paragraph h2, .about-header-paragraph h3, .about-header-paragraph h4,.about-header-paragraph h5, .about-header-paragraph h6 {
     color: black;
     text-align: center;
+}
+
+.main-text{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.main-text-img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.main-text-img img{
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    width: 90vw;
+    max-width: 700px;
+    height: auto;
 }
 
 @media screen and (max-width: 1600px) {
