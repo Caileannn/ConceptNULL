@@ -86,6 +86,10 @@ button{
     
 }
 
+.span-uni-arrow{
+    font-family: "Helvetica Neue", sans-serif;
+}
+
 @media (max-width: 1750px) {
     .btn-nav{
         width: 150px;

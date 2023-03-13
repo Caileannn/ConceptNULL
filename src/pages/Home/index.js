@@ -35,7 +35,7 @@ export default function Index() {
         <p>Morbi quis metus nec ex porta pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent vehicula porta tellus, semper placerat magna tristique a. Nulla tristique sapien felis, vel imperdiet neque interdum vel. Vestibulum non sapien quis dolor fringilla fringilla at ut massa. Pellentesque eu nunc sed tortor cursus porttitor ac sit amet dolor. Sed nisl nisl, sollicitudin non risus a, iaculis tempus erat. Vestibulum pulvinar convallis enim, ut efficitur libero. Sed mollis luctus tortor ut efficitur. Aliquam posuere leo nulla, non consequat augue dapibus quis. Phasellus porttitor sodales orci sed sodales. Integer eget nibh a nulla iaculis cursus et eget erat. Nulla id fringilla mauris.</p>
       </div>
       <div className="home-button">
-          <button>Sign-up&#x1F86D;</button>
+          <button>Sign-up<span className="span-uni-arrow">&#x1F86D;</span></button>
       </div>
       </div>
       
