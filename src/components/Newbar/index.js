@@ -9,7 +9,7 @@ import App from '../../app.json'
 export default function Index() {
   return (
     <div className="nb-band">
-        <button className="btn-band">
+        <div className="btn-band">
             <div className="btn-group">
                 <Link to="/news"><button>News&#x1F86D;</button></Link>
                 <Link to="/about"><button>About&#x1F86D;</button></Link>
@@ -17,7 +17,7 @@ export default function Index() {
                 <Link to="/faq"><button>F.A.Q&#x1F86D;</button></Link> 
                 <Link to="/"><button>#&#x1F86D;</button></Link>
             </div>
-        </button>
+        </div>
     </div>
   );
 }
