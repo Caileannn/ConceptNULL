@@ -45,7 +45,7 @@ But this should not be limited to artists. Any <span className="hl-text">technic
 <p><u>You can sign-up below by filling out a short Google Form!</u></p>
       </div>
       <div className="home-button">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyw93dKoFG2JA0tu0YmVkYSFovwKCCGRKehMJiHFLGhDUMvA/viewform" target="_blank"><button>Sign-up <span className="span-uni-arrow">↗</span></button></a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSddDs3mi4qJ3C9VGmNJ05VyEUviYFu8MxhMTUL_MsCcdDcraA/viewform" target="_blank"><button>Sign-up <span className="span-uni-arrow">↗</span></button></a>
       </div>
       </div>
       
