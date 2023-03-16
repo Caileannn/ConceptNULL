@@ -1,6 +1,6 @@
 {
-  "name": "fioruil",
-  "version": "0.1.0",
+  "name": "concept-null",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.8.0",
@@ -26,7 +26,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
