@@ -66,6 +66,7 @@ export default function Index() {
         <div className="obj-row">
           <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
           <h4>{elm.location}</h4>
+          <h3>{elm.keyword}</h3>
         </div>
         <p>{elm.short_desc}</p>
         <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
@@ -84,6 +85,7 @@ export default function Index() {
         <div className="obj-row">
           <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
           <h4>{elm.location}</h4>
+          <h3 className="keyword">{elm.keyword}</h3>
         </div>
         <p>{elm.short_desc}</p>
         <a href={elm.url} target="_blank"><h5>Link↗</h5></a>

@@ -109,6 +109,7 @@
 .addelm p{
   margin: 0;
   margin-bottom: 20px;
+  line-height: 25px;
 }
 
 .obj{
@@ -135,6 +136,10 @@
     margin-right: 33%;
 }
 
+.keyword{
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 950px) {
   .dropzone{
     width: 300px;
@@ -142,10 +147,12 @@
 
   .addelm h1{
     font-size: 2rem;
+    text-align: center;
   }
 
   .addelm h2{
     font-size: 1.5rem;
+    text-align: center;
   }
 
   .addelm h3{
@@ -158,10 +165,21 @@
 
   .addelm h5{
     font-size: 1rem;
+    text-align: center;
+    width: 100%;
   }
+  
   .obj-row{
     justify-content: space-between;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
+  .addelm p{
+    text-align: center;
+  }
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -171,10 +189,12 @@
 
   .addelm h1{
     font-size: 1.8rem;
+    
   }
 
   .addelm h2{
     font-size: 1.3rem;
+    
   }
 
   .addelm h3{
@@ -188,7 +208,6 @@
   .addelm h5{
     font-size: 0.9rem;
   }
-
  
 
   
