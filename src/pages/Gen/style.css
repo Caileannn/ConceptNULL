@@ -131,5 +131,66 @@
     color:#ffffff;
     height: 1px;
     margin-top: 20px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+@media screen and (max-width: 950px) {
+  .dropzone{
+    width: 300px;
+  }
+
+  .addelm h1{
+    font-size: 2rem;
+  }
+
+  .addelm h2{
+    font-size: 1.5rem;
+  }
+
+  .addelm h3{
+    font-size: 1rem;
+  }
+
+  .addelm h4{
+    font-size: 1rem;
+  }
+
+  .addelm h5{
+    font-size: 1rem;
+  }
+  .obj-row{
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dropzone{
+    width: 300px;
+  }
+
+  .addelm h1{
+    font-size: 1.8rem;
+  }
+
+  .addelm h2{
+    font-size: 1.3rem;
+  }
+
+  .addelm h3{
+    font-size: 0.9rem;
+  }
+
+  .addelm h4{
+    font-size: 0.9rem;
+  }
+
+  .addelm h5{
+    font-size: 0.9rem;
+  }
+
+ 
+
+  
 }
 
