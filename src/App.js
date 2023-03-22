@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import News from "./pages/News";
 import About from "./pages/About";
 //import Market from "./pages/Market/index";
-import Faq from './pages/Faq'
+import Faq from './pages/Faq';
+import Gen from './pages/Gen';
 
 //import Item from "./pages/Item/index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -32,6 +33,7 @@ function App() {
           */}
           <Route path="about" element={<About />} />
           <Route path="faq" element={<Faq />} />
+          <Route path="gen" element={<Gen />}></Route>
         </Routes>
       
       </BrowserRouter>

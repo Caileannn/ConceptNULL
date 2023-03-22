@@ -1,0 +1,135 @@
+.dropzone {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    height: 150px;
+    width: 400px;
+    border: 2px dashed rgb(0, 60, 255);
+    outline: none;
+    border-radius: 200px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    font-size: 1.7rem;
+  }
+
+  .dropzoneReject {
+    border: 2px dashed red;
+  }
+  .dropzoneAccept {
+    border: 2px dashed green;
+  } 
+
+.gen-cont{
+    margin-top: 5%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.gen-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    
+}
+
+.addelm{
+  width: 80%;
+}
+
+.addelm h1{
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: normal;
+    font-weight: 700;
+    font-style: bold;
+    color: black;
+    text-decoration: underline;
+}
+
+.addelm h2{
+  color:blue;
+  font-size: 1.9rem;
+  text-decoration: underline;
+  font-style: normal;
+  margin: 0;
+}
+
+.addelm h3{
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.addelm a{
+  width: fit-content;
+}
+
+.addelm h5{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    color:  rgb(138, 88, 253);
+    width: fit-content;
+}
+
+.addelm h4{
+  color: black;
+  border: 2px solid rgb(0, 0, 0);
+  font-size: 1.0rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  border-radius: 20px;
+  background-color: #eee;
+  padding: 10px;
+  width: fit-content;
+  box-shadow: 0 3px 70px rgb(0 0 0 / 0.2);
+  font-style: normal;
+  font-weight: 500;
+  
+}
+
+
+.addelm h6{
+  font-size: 3rem;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+
+}
+
+.addelm p{
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.obj{
+  margin-bottom: 75px;
+  text-align: left;
+  width: 100%;
+}
+
+.obj-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.line-break{
+  display:block;
+    background-color:#000000;
+    text-align:center;
+    color:#ffffff;
+    height: 1px;
+    margin-top: 20px;
+}
+
