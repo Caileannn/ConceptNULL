@@ -12,6 +12,8 @@ export default function Index() {
     {}
   ])
 
+  var deadlineDate;
+
   //Accepts file dropped in
   const onDrop = useCallback(acceptedFiles => {
     console.log(acceptedFiles);
@@ -53,136 +55,153 @@ export default function Index() {
 
   
   let currentDate = new Date();
-  console.log(currentDate)
 
   const mapOCList = obj.map(elm => {
 
-   let date = new Date(elm.deadline)
-
-   if(elm.type == "opencall" && date >= currentDate){
-    return(
-    <div className="obj">
-        <h2>{elm.title}</h2>
-        <div className="obj-row">
-          <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-          <h4>{elm.location}</h4>
-          <h3>{elm.keyword}</h3>
+   if(elm.type == "opencall"){
+    deadlineDate = new Date(elm.deadline)
+    if(deadlineDate >= currentDate){
+      return(
+      <div className="obj">
+          <h2>{elm.title}</h2>
+          <div className="obj-row">
+            <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
+            <h4>{elm.location}</h4>
+            <h3>{elm.keyword}</h3>
+          </div>
+          <p>{elm.short_desc}</p>
+          <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+          <div className="line-break"></div>
         </div>
-        <p>{elm.short_desc}</p>
-        <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
-        <div className="line-break"></div>
-      </div>)
+        )}
+ }
+})
+
+  const mapRList = obj.map(elm => {
+
+    if(elm.type == "residency"){
+      deadlineDate = new Date(elm.deadline)
+      if(deadlineDate >= currentDate){
+        return(
+        <div className="obj">
+            <h2>{elm.title}</h2>
+            <div className="obj-row">
+              <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
+              <h4>{elm.location}</h4>
+              <h3>{elm.keyword}</h3>
+            </div>
+            <p>{elm.short_desc}</p>
+            <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+            <div className="line-break"></div>
+          </div>
+          )}
    }
   })
 
-  const mapRList = obj.map(elm => {
-    let date = new Date(elm.deadline)
-
-    if(elm.type == "residency" && date >= currentDate){
-     return(
-     <div className="obj">
-         <h2>{elm.title}</h2>
-        <div className="obj-row">
-          <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-          <h4>{elm.location}</h4>
-          <h3 className="keyword">{elm.keyword}</h3>
-        </div>
-        <p>{elm.short_desc}</p>
-        <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
-        <div className="line-break"></div>
-       </div>)
-    }
-   })
-
    const mapFOList = obj.map(elm => {
-    let date = new Date(elm.deadline)
 
-    if(elm.type == "funding" && date >= currentDate){
-     return(
-     <div className="obj">
-         <h2>{elm.title}</h2>
-        <div className="obj-row">
-          <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-          <h4>{elm.location}</h4>
-        </div>
-        <p>{elm.short_desc}</p>
-        <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
-        <div className="line-break"></div>
-       </div>)
-    }
-   })
+    if(elm.type == "funding"){
+      deadlineDate = new Date(elm.deadline)
+      if(deadlineDate >= currentDate){
+        return(
+        <div className="obj">
+            <h2>{elm.title}</h2>
+            <div className="obj-row">
+              <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
+              <h4>{elm.location}</h4>
+              <h3>{elm.keyword}</h3>
+            </div>
+            <p>{elm.short_desc}</p>
+            <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+            <div className="line-break"></div>
+          </div>
+          )}
+   }
+  })
 
    const mapPFList = obj.map(elm => {
-    let date = new Date(elm.deadline)
 
-    if(elm.type == "projectfunding" && date >= currentDate){
-     return(
-     <div className="obj">
-         <h2>{elm.title}</h2>
-        <div className="obj-row">
-          <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-          <h4>{elm.location}</h4>
-        </div>
-        <p>{elm.short_desc}</p>
-        <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
-        <div className="line-break"></div>
-       </div>)
-    }
-   })
+    if(elm.type == "projectfunding"){
+      deadlineDate = new Date(elm.deadline)
+      if(deadlineDate >= currentDate){
+        return(
+        <div className="obj">
+            <h2>{elm.title}</h2>
+            <div className="obj-row">
+              <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
+              <h4>{elm.location}</h4>
+              <h3>{elm.keyword}</h3>
+            </div>
+            <p>{elm.short_desc}</p>
+            <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+            <div className="line-break"></div>
+          </div>
+          )}
+   }
+  })
 
    const mapWSList = obj.map(elm => {
-    let date = new Date(elm.deadline)
-
-    if(elm.type == "workshop" && date >= currentDate){
-     return(
-     <div className="obj">
-         <h2>{elm.title}</h2>
-        <div className="obj-row">
-          <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-          <h4>{elm.location}</h4>
-        </div>
-        <p>{elm.short_desc}</p>
-        <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
-        <div className="line-break"></div>
-       </div>)
-    }
-   })
+    
+    if(elm.type == "workshop"){
+      deadlineDate = new Date(elm.deadline)
+      if(deadlineDate >= currentDate){
+        return(
+        <div className="obj">
+            <h2>{elm.title}</h2>
+            <div className="obj-row">
+              <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
+              <h4>{elm.location}</h4>
+              <h3>{elm.keyword}</h3>
+            </div>
+            <p>{elm.short_desc}</p>
+            <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+            <div className="line-break"></div>
+          </div>
+          )}
+   }
+  })
 
    const mapJOList = obj.map(elm => {
-    let date = new Date(elm.deadline)
 
-    if(elm.type == "job" && date >= currentDate){
-     return(
-     <div className="obj">
-         <h2>{elm.title}</h2>
-        <div className="obj-row">
-          <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-          <h4>{elm.location}</h4>
-        </div>
-        <p>{elm.short_desc}</p>
-        <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
-        <div className="line-break"></div>
-       </div>)
-    }
-   })
+    if(elm.type == "job"){
+      deadlineDate = new Date(elm.deadline)
+      if(deadlineDate >= currentDate){
+        return(
+        <div className="obj">
+            <h2>{elm.title}</h2>
+            <div className="obj-row">
+              <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
+              <h4>{elm.location}</h4>
+              <h3>{elm.keyword}</h3>
+            </div>
+            <p>{elm.short_desc}</p>
+            <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+            <div className="line-break"></div>
+          </div>
+          )}
+   }
+  })
 
    const mapSVList = obj.map(elm => {
-    let date = new Date(elm.deadline)
 
-    if(elm.type == "studio" && date >= currentDate){
-     return(
-     <div className="obj">
-         <h2>{elm.title}</h2>
-        <div className="obj-row">
-          <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-          <h4>{elm.location}</h4>
-        </div>
-        <p>{elm.short_desc}</p>
-        <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
-        <div className="line-break"></div>
-       </div>)
-    }
-   })
+    if(elm.type == "studio"){
+      deadlineDate = new Date(elm.deadline)
+      if(deadlineDate >= currentDate){
+        return(
+        <div className="obj">
+            <h2>{elm.title}</h2>
+            <div className="obj-row">
+              <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
+              <h4>{elm.location}</h4>
+              <h3>{elm.keyword}</h3>
+            </div>
+            <p>{elm.short_desc}</p>
+            <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+            <div className="line-break"></div>
+          </div>
+          )}
+   }
+  })
 
   
   
