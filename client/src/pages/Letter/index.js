@@ -61,7 +61,7 @@ const [call_text, setCalls] = useState([{}])
   let news = "./newsletter.csv"
   let currentDate = new Date();
 
-
+    /*
   useEffect(()=>{
     Papa.parse(news,{
       download: true,
@@ -74,7 +74,8 @@ const [call_text, setCalls] = useState([{}])
 
   }, [])
 
-  
+  */ 
+ 
   const mapIntroduction = introduction_text.map(elm => {
     return(
       <div className="letter-intro">
