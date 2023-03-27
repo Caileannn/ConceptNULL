@@ -15,6 +15,10 @@ module.exports = async function getCalls(){
     console.log("Fetching...")
     const {results} = await notion.databases.query({
         database_id: database_calls_Id,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          }
     })
     /*
     console.log(results[0].properties.type.multi_select[0].name)

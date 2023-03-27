@@ -15,6 +15,10 @@ module.exports = async function getUpdate(){
     console.log("Fetching...")
     const {results} = await notion.databases.query({
         database_id: database_intro_Id,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          }
     })
     const updates = results.map((page) => {       
         return{
