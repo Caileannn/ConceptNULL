@@ -6,8 +6,8 @@
     "nodemon": "^2.0.22"
   },
   "scripts": {
-    "start": "nodemon server",
-    "build": "react-scripts build",
+    "dev": "node server.js",
+    "build": "npm i",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   }
