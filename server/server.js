@@ -19,24 +19,28 @@ const app = express()
 app.get('/newsletter-introduction', async(req, res) => {
      const introduction = await getIntro()
      console.log("<Introduction Fetched>")
+     res.setHeader('Content-Type', 'application/json');
      res.json(introduction)
 })
 
 app.get('/updates', async(req, res) => {
      const update = await getUpdate()
      console.log("<Updated Fetched>")
+     res.setHeader('Content-Type', 'application/json');
      res.json(update)
 })
 
 app.get('/spotlights', async(req, res) => {
      const spotlight = await getSpotlight()
      console.log("<Spotlight Fetched>")
+     res.setHeader('Content-Type', 'application/json');
      res.json(spotlight)
 })
 
 app.get('/calls', async(req, res) => {
      const calls = await getCalls()
      console.log("<Calls Fetched>")
+     res.setHeader('Content-Type', 'application/json');
      res.json(calls)
 })
 

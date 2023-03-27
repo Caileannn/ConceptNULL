@@ -15,10 +15,6 @@ module.exports = async function getIntro(){
     console.log("Fetching...")
     const {results} = await notion.databases.query({
         database_id: database_intro_Id,
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          }
     })
     const info_intro = results.map((page) => {   
         
