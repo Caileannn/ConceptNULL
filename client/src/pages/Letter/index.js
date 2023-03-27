@@ -7,11 +7,6 @@ import { useState, useEffect } from "react";
 
 export default function Index() {
 
-
-  const [obj, setObj] = useState([
-    {}
-  ])
-
 const [introduction_text, setIntro] = useState([{}])
 const [update_text, setUpdate] = useState([{}])
 const [spotlight_text, setSpotlight] = useState([{}])
@@ -19,7 +14,9 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("/newsletter-introduction").then(
+    fetch("/newsletter-introduction", { 
+      headers: {"Content-Type": "application/json"},
+    }).then(
       response => response.json())
       .then(
       data => {
