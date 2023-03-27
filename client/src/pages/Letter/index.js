@@ -24,6 +24,7 @@ const [call_text, setCalls] = useState([{}])
       .then(
       data => {
         setIntro(data)
+        console.log(data)
       }
   )}, [] )
   
