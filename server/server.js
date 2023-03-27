@@ -41,7 +41,7 @@ app.get('/calls', async(req, res) => {
      res.setHeader('Content-Type', 'application/json');
      const calls = await getCalls()
      console.log("<Calls Fetched>")
-     res.json(calls)
+     console.log(res.json(calls))
 })
 
 
