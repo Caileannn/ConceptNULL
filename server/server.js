@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const routeHandler = require('./services/notion.js')
 const cors = require('cors')
-const port = process.env.PORT 
+const port = 10000;
 
 
 
