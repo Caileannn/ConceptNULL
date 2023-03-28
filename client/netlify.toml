@@ -4,6 +4,6 @@
   status = 200
 
 [[headers]]
-  for = "/newsletter-introduction"
+  for = "/newsletter-introduction", "/updates", "spotlights", "calls"
   [headers.values]
     Content-Type = "application/json"
