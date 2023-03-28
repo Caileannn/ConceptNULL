@@ -10,7 +10,7 @@ const getSpotlight = require('./services/notion_spotlight')
 const getCalls = require('./services/notion_calls')
 
 const express = require('express')
-const PORT = process.env.PORT || 5000
+const port = process.env.PORT
 
 
 const app = express()
@@ -29,7 +29,7 @@ app.get('/newsletter-introduction', async(req, res) => {
      const introduction = await getIntro()
      console.log("<Introduction Fetched>")
      res.set('Content-Type', 'application/json')
-     res.json(introduction)
+     res.json({"foo": "bar"})
 })
 
 app.get('/updates', async(req, res) => {
@@ -57,4 +57,4 @@ app.get('/calls', async(req, res) => {
 
 
 //Start sterver
-app.listen(PORT, console.log('Server started on port ' + PORT + "\n"))
+app.listen(port, console.log('Server started on port ' + port + "\n"))
