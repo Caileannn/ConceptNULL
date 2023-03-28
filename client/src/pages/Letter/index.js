@@ -13,8 +13,15 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/intro").then(
-      response => response.json())
+    fetch("https://conceptnull.onrender.com/api/intro", {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+    }
+    })
+    .then(response => response.json())
         .then(
       data => {
         setIntro(data)
