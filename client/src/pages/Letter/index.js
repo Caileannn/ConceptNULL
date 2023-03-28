@@ -31,7 +31,7 @@ const [call_text, setCalls] = useState([{}])
   
   
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/updates", {
+    fetch("/api/updates", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -49,7 +49,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/spotlights", {
+    fetch("/api/spotlights", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -67,7 +67,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/calls", {
+    fetch("/api/calls", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {

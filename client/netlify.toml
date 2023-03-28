@@ -8,8 +8,3 @@
   [headers.values]
     Content-Type = "application/json"
     Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/api/intro"
-  [headers.values]
-    Content-Type = "application/json"
