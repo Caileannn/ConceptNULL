@@ -15,6 +15,9 @@ const database_spotlight_Id = process.env.NOTION_CN_SPOTLIGHT_DB_KEY
 const database_calls_Id = process.env.NOTION_CN_CALLS_DB_KEY
 
 router.get('/intro', async(req, res) => {
+    res.setHeader("X-Frame-Options", "ALLOWALL");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET");
     const introduction = await getIntro()
     console.log("<Introduction Fetched>")
     res.setHeader("Content-Type", "application/json")
@@ -22,6 +25,7 @@ router.get('/intro', async(req, res) => {
 })
 
 router.get('/updates', async(req, res) => {
+    
     const update = await getUpdate()
     console.log("<Updated Fetched>")
     res.setHeader("Content-Type", "application/json")

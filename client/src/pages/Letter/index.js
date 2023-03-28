@@ -13,7 +13,7 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("/api/intro").then(
+    fetch("https://conceptnull.onrender.com/api/intro").then(
       response => response.json())
         .then(
       data => {
