@@ -14,8 +14,12 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("/newsletter-introduction", { 
-      headers: {"Content-Type": "application/json"},
+    fetch("/newsletter-introduction", {
+      method: 'POST',
+      body: object,
+      headers: {
+        'Content-Type': 'application/json'
+      }
     }).then(
       response => response.json())
       .then(

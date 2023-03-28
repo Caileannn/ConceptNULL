@@ -16,15 +16,7 @@ module.exports = async function getCalls(){
     const {results} = await notion.databases.query({
         database_id: database_calls_Id,
     })
-    /*
-    console.log(results[0].properties.type.multi_select[0].name)
-    console.log(results[0].properties.deadline.date.start)
-    console.log(results[0].properties.url.url)
-    console.log(results[0].properties.location.rich_text[0].plain_text)
-    console.log(results[0].properties.text.rich_text[0].plain_text)
-    console.log(results[0].properties.keywords.rich_text[0].plain_text)
-    console.log(results[0].properties.title.title[0].plain_text)
-    */
+    
     const calls = results.map((page) => {       
         return{
             type: page.properties.type.multi_select[0].name,
