@@ -21,7 +21,7 @@ const [call_text, setCalls] = useState([{}])
   }).then(
       response => console.log(response)
       /*response => response.json())
-      */.then(
+      */).then(
       data => {
         setIntro(data)
         console.log(data)
