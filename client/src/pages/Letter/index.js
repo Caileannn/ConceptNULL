@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "../../components/container";
 import "./style.css";
-import Papa from 'papaparse';
 import { useState, useEffect } from "react";
 
 
@@ -14,13 +13,12 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("/newsletter-introduction", {
-      method: 'POST',
-      body: object,
+    fetch("/newsletter-introduction",  {
+      method: 'GET',
       headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(
+      'Accept': 'application/json',
+    }
+  }).then(
       response => response.json())
       .then(
       data => {

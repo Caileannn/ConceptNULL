@@ -20,13 +20,13 @@ app.get('/newsletter-introduction', async(req, res) => {
      const introduction = await getIntro()
      console.log("<Introduction Fetched>")
      res.json(introduction)
-     console.log(introduction)
 })
 
 app.get('/updates', async(req, res) => {
      const update = await getUpdate()
      console.log("<Updated Fetched>")
      res.json(update)
+     console.log(update)
 })
 
 app.get('/spotlights', async(req, res) => {
