@@ -26,6 +26,10 @@ router.get('/intro', async(req, res) => {
 })
 
 router.get('/updates', async(req, res) => {
+    res.setHeader("X-Frame-Options", "ALLOWALL");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     const update = await getUpdate()
     console.log("<Updated Fetched>")
     res.setHeader("Content-Type", "application/json")
@@ -33,6 +37,10 @@ router.get('/updates', async(req, res) => {
 })
 
 router.get('/spotlights', async(req, res) => {
+    res.setHeader("X-Frame-Options", "ALLOWALL");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     const spotlight = await getSpotlight()
     console.log("<Spotlight Fetched>")
     res.setHeader("Content-Type", "application/json")
@@ -40,6 +48,10 @@ router.get('/spotlights', async(req, res) => {
 })
 
 router.get('/calls', async(req, res) => {
+    res.setHeader("X-Frame-Options", "ALLOWALL");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     const calls = await getCalls()
     console.log("<Calls Fetched>")
     res.setHeader("Content-Type", "application/json")
@@ -57,7 +69,7 @@ async function getCalls(){
     const calls = results.map((page) => {       
         return{
             type: page.properties.type.multi_select[0].name,
-            deadline: page.properties.deadline.date,
+            deadline: page.properties.deadline.date.start,
             url: page.properties.url.url,
             location: page.properties.location.rich_text[0].plain_text,        
             text: page.properties.text.rich_text[0].plain_text,
