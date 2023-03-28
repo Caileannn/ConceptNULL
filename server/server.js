@@ -15,21 +15,33 @@ const PORT = process.env.PORT || 5000
 
 const app = express()
 
+app.use((req, res, next) => {
+     res.append('Access-Control-Allow-Origin', ['*']);
+     res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+     res.append('Access-Control-Allow-Headers', 'Content-Type');
+     res.set('Content-Type', 'application/json')
+     res.setHeader('Content-Type', 'application/json');
+     next();
+ });
+
 // Newsletter Call
 app.get('/newsletter-introduction', async(req, res) => {
      const introduction = await getIntro()
      console.log("<Introduction Fetched>")
+     res.set('Content-Type', 'application/json')
      res.json(introduction)
 })
 
 app.get('/updates', async(req, res) => {
      const update = await getUpdate()
+     res.setHeader('Content-Type', 'application/json');
      console.log("<Updated Fetched>")
      res.json(update)
      console.log(update)
 })
 
 app.get('/spotlights', async(req, res) => {
+     res.setHeader('Content-Type', 'application/json');
      const spotlight = await getSpotlight()
      console.log("<Spotlight Fetched>")
      res.json(spotlight)
