@@ -13,7 +13,7 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("/api/newsletter").then(
+    fetch("/api").then(
       response => response.json())
         .then(
       data => {

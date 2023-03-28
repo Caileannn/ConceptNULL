@@ -14,28 +14,28 @@ const database_update_Id = process.env.NOTION_CN_UPDATE_DB_KEY
 const database_spotlight_Id = process.env.NOTION_CN_SPOTLIGHT_DB_KEY
 const database_calls_Id = process.env.NOTION_CN_CALLS_DB_KEY
 
-router.get('/api/newsletter', async(req, res) => {
+router.get('/', async(req, res) => {
     const introduction = await getIntro()
     console.log("<Introduction Fetched>")
     res.setHeader("Content-Type", "application/json")
     res.end(JSON.stringify(introduction))
 })
 
-router.get('/api/updates', async(req, res) => {
+router.get('/', async(req, res) => {
     const update = await getUpdate()
     console.log("<Updated Fetched>")
     res.setHeader("Content-Type", "application/json")
     res.end(JSON.stringify(update))
 })
 
-router.get('/api/spotlights', async(req, res) => {
+router.get('/', async(req, res) => {
     const spotlight = await getSpotlight()
     console.log("<Spotlight Fetched>")
     res.setHeader("Content-Type", "application/json")
     res.end(JSON.stringify(spotlight))
 })
 
-router.get('/api/calls', async(req, res) => {
+router.get('/', async(req, res) => {
     const calls = await getCalls()
     console.log("<Calls Fetched>")
     res.setHeader("Content-Type", "application/json")

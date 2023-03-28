@@ -6,7 +6,7 @@ const port = process.env.PORT
 const app = express()
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
-app.use('/', routeHandler)
+app.use('/api', routeHandler)
 
 
 //Start sterver
