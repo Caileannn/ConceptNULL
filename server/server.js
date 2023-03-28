@@ -28,8 +28,9 @@ app.use((req, res, next) => {
 app.get('/newsletter-introduction', async(req, res) => {
      const introduction = await getIntro()
      console.log("<Introduction Fetched>")
-     res.set('Content-Type', 'application/json')
-     res.json({"foo": "bar"})
+     res.setHeader("Content-Type", "application/json")
+     res.json(introduction)
+     res.end(JSON.stringify(introduction))
 })
 
 app.get('/updates', async(req, res) => {
