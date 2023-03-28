@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const routeHandler = require('./services/notion.js')
 const cors = require('cors')
-const port = process.env.PORT
+const port = process.env.PORT 
 
 
 
@@ -25,7 +25,6 @@ app.use(bodyParser.json())
 app.use('/api', routeHandler)
 
 
-app.use(express.static('../client/public'))
 
 
 //Start sterver
