@@ -4,11 +4,12 @@
   status = 200
 
 [[headers]]
-  for = "/newsletter-introduction"
+  for = "/*"
   [headers.values]
     Content-Type = "application/json"
+    Access-Control-Allow-Origin = "*"
 
 [[headers]]
-  for = "/updates"
+  for = "/api/intro"
   [headers.values]
     Content-Type = "application/json"
