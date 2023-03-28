@@ -29,7 +29,7 @@ app.get('/newsletter-introduction', async(req, res) => {
      const introduction = await getIntro()
      console.log("<Introduction Fetched>")
      res.setHeader("Content-Type", "application/json")
-     res.json(introduction)
+     //res.json(introduction)
      res.end(JSON.stringify(introduction))
 })
 
