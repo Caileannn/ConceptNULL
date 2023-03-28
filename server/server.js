@@ -10,11 +10,13 @@ const getSpotlight = require('./services/notion_spotlight')
 const getCalls = require('./services/notion_calls')
 
 const express = require('express')
+const routeHandler = require('./services/notion')
 const port = process.env.PORT
 
-
 const app = express()
+app.use('/', routeHandler)
 
+/*
 app.use((req, res, next) => {
      res.append('Access-Control-Allow-Origin', ['*']);
      res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -25,15 +27,14 @@ app.use((req, res, next) => {
  });
 
 // Newsletter Call
-app.get('/newsletter-introduction', async(req, res) => {
+app.get('/api/newsletter-introduction', async(req, res) => {
      const introduction = await getIntro()
      console.log("<Introduction Fetched>")
      res.setHeader("Content-Type", "application/json")
-     //res.json(introduction)
      res.end(JSON.stringify(introduction))
 })
 
-app.get('/updates', async(req, res) => {
+app.get('/api/updates', async(req, res) => {
      const update = await getUpdate()
      res.setHeader('Content-Type', 'application/json');
      console.log("<Updated Fetched>")
@@ -41,20 +42,20 @@ app.get('/updates', async(req, res) => {
      console.log(update)
 })
 
-app.get('/spotlights', async(req, res) => {
+app.get('/api/spotlights', async(req, res) => {
      res.setHeader('Content-Type', 'application/json');
      const spotlight = await getSpotlight()
      console.log("<Spotlight Fetched>")
      res.json(spotlight)
 })
 
-app.get('/calls', async(req, res) => {
+app.get('/api/calls', async(req, res) => {
      const calls = await getCalls()
      console.log("<Calls Fetched>")
      res.json(calls)
 })
 
-
+*/
 
 
 //Start sterver

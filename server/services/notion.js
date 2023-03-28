@@ -1,5 +1,7 @@
 const dotenv = require('dotenv').config()
+const express = require('express')
 const { Client } = require('@notionhq/client')
+const router = express.Router()
 
 //Init client
 const notion = new Client({
@@ -9,9 +11,18 @@ const notion = new Client({
 // Introduction Database Key
 const database_intro_Id = process.env.NOTION_CN_INTRO_DB_KEY
 
+router.get('/newsletter', async(req, res) => {
+    const introduction = await getIntro()
+    console.log("<Introduction Fetched>")
+    res.setHeader("Content-Type", "application/json")
+    res.end(JSON.stringify(introduction))
+})
+
+module.exports = router;
+
 
 // Fetch Introduction Information
-module.exports = async function getIntro(){
+async function getIntro(){
     console.log("Fetching...")
     const {results} = await notion.databases.query({
         database_id: database_intro_Id,
