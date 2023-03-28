@@ -19,8 +19,9 @@ const [call_text, setCalls] = useState([{}])
       'Accept': 'application/json',
     }
   }).then(
-      response => response.json())
-      .then(
+      response => console.log(response)
+      /*response => response.json())
+      */.then(
       data => {
         setIntro(data)
         console.log(data)
