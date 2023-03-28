@@ -13,7 +13,7 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("/newsletter").then(
+    fetch("/api/newsletter").then(
       response => response.json())
         .then(
       data => {
@@ -24,7 +24,7 @@ const [call_text, setCalls] = useState([{}])
   
   
   useEffect(() =>{
-    fetch("/updates").then(
+    fetch("/api/updates").then(
       response => response.json()
     ).then(
       update_res => {
@@ -35,7 +35,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("/spotlights").then(
+    fetch("/api/spotlights").then(
       response => response.json()
     ).then(
       spotlight_res => {
@@ -46,7 +46,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("/calls").then(
+    fetch("/api/calls").then(
       response => response.json()
     ).then(
       data => {
