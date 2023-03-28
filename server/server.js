@@ -7,24 +7,23 @@ const port = process.env.PORT
 
 
 const app = express()
-/*
+
 var corsOptions = function(req, res, next){ 
     res.header('Access-Control-Allow-Origin', '*'); 
     next();
 }
-*/
 
 
 
-//app.use(corsOptions)
 
-app.use(cors())
+app.use(corsOptions)
+
 
 
 app.use('/api', routeHandler)
 
 
-//app.use(express.static('../client/public'))
+app.use(express.static('../client/public'))
 
 
 //Start sterver

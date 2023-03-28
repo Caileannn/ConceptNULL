@@ -14,7 +14,7 @@ const [call_text, setCalls] = useState([{}])
 
   useEffect(() =>{
     fetch("https://conceptnull.onrender.com/api/intro", {
-    method: 'POST',
+    method: 'GET',
     credentials: 'same-origin',
     headers: {
         'Accept': 'application/json',
@@ -31,7 +31,14 @@ const [call_text, setCalls] = useState([{}])
   
   
   useEffect(() =>{
-    fetch("/api/updates").then(
+    fetch("https://conceptnull.onrender.com/api/updates", {
+      method: 'GET',
+      credentials: 'same-origin',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+      }
+      }).then(
       response => response.json()
     ).then(
       update_res => {
@@ -42,7 +49,14 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("/api/spotlights").then(
+    fetch("https://conceptnull.onrender.com/api/spotlights", {
+      method: 'GET',
+      credentials: 'same-origin',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+      }
+      }).then(
       response => response.json()
     ).then(
       spotlight_res => {
@@ -53,7 +67,14 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("/api/calls").then(
+    fetch("https://conceptnull.onrender.com/api/calls", {
+      method: 'GET',
+      credentials: 'same-origin',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+      }
+      }).then(
       response => response.json()
     ).then(
       data => {

@@ -54,7 +54,7 @@ async function getCalls(){
     const calls = results.map((page) => {       
         return{
             type: page.properties.type.multi_select[0].name,
-            deadline: page.properties.deadline.date,
+            deadline: page.properties.deadline.date.start,
             url: page.properties.url.url,
             location: page.properties.location.rich_text[0].plain_text,        
             text: page.properties.text.rich_text[0].plain_text,
