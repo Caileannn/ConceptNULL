@@ -13,7 +13,7 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/intro", {
+    fetch("/api/intro", {
     method: 'GET',
     credentials: 'same-origin',
     headers: {
@@ -24,14 +24,14 @@ const [call_text, setCalls] = useState([{}])
     .then(response => response.json())
         .then(
       data => {
-        setIntro(data)
         console.log(data)
+        setIntro(data)
       }
   )}, [] )
   
   
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/updates", {
+    fetch("/api/updates", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -43,25 +43,16 @@ const [call_text, setCalls] = useState([{}])
     ).then(
       update_res => {
         setUpdate(update_res)
-        console.log(update_res)
       }
     )
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/spotlights", {
-      method: 'GET',
-      credentials: 'same-origin',
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-      }
-      }).then(
+    fetch("/api/spotlights").then(
       response => response.json()
     ).then(
       spotlight_res => {
         setSpotlight(spotlight_res)
-        console.log(spotlight_res)
       }
     )
   }, [])
@@ -84,25 +75,48 @@ const [call_text, setCalls] = useState([{}])
   
   var deadlineDate;
   let news = "./newsletter.csv"
+  let testText = []
   let currentDate = new Date()
  
   const mapIntroduction = introduction_text.map(elm => {
+
+    testText = []
+    testText = elm.text_body
+    if(introduction_text.length > 0 && testText != null){
     return(
       <div className="letter-intro">
             <span className="top-date">
               {elm.date}
             </span>
             <h1 className="letter-date">{elm.header}</h1>  
-              <p>{elm.text_body}</p>
+              {
+                testText.map(elm => {
+                  return(
+                    <p>{elm.plain_text}</p>
+                  )
+                })
+              }
         </div>
    )
-  })
+  }
+})
+
 
   const mapUpdates = update_text.map(elm => {
+
+    testText = []
+    testText = elm.text
+    if(update_text.length > 0 && testText != null){
     return(
       <div className="weekly-spot">
               <span>{elm.header}</span>
-              <p>{elm.text}</p>
+              {
+                testText.map(elm => {
+                  return(
+                    <p>{elm.plain_text}</p>
+                  )
+                })
+              }
               <a href={elm.url}><h5>Link↗</h5></a>
               <div className="weekly-image">
                 <img src={elm.img_url}></img>
@@ -110,21 +124,40 @@ const [call_text, setCalls] = useState([{}])
               <div className="weekly-line-break"></div>
             </div>
     )
-  })
+  }
+})
 
+
+  
   const mapSpotlights = spotlight_text.map(elm => {
-    return(
-      <div className="weekly-spot">
-              <span>{elm.header}</span>
-              <p>{elm.text}</p>
-              <a href={elm.url}><h5>Link↗</h5></a>
-              <div className="weekly-image">
-                <img src={elm.img_url}></img>
-              </div>
-              <div className="weekly-line-break"></div>
-      </div>
-    )
+
+     testText = []
+      testText = elm.text
+      if(spotlight_text.length > 0 && testText != null){
+        
+      return(
+        <div className="weekly-spot">
+                <span>{elm.header}</span>
+                {
+                  testText.map(elm => {
+                    return(
+                      <p>{elm.plain_text}</p>
+                    )
+                  })
+                }
+                <a href={elm.url}><h5>Link↗</h5></a>
+                <div className="weekly-image">
+                  <img src={elm.img_url}></img>
+                </div>
+                <div className="weekly-line-break"></div>
+        </div>
+      )
+    }
+
+    
   })
+  
+  
   
 
 
@@ -286,13 +319,14 @@ const [call_text, setCalls] = useState([{}])
         <div className="gen-body">
           {mapIntroduction}
           <div className="letter-weekly">
-          <h1>Updates 🔔</h1>
+          {update_text.length > 0 && 
+            <h1>Updates</h1>
+            }
           {mapUpdates}
           <h1>Weekly Spotlight 🔦</h1>
           {mapSpotlights}
           </div>
        <div className="addelm">
-
           <h1>Open Calls📯</h1>
             {mapOCList}
           <h1>Residencies🏠</h1>

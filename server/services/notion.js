@@ -22,7 +22,7 @@ router.get('/intro', async(req, res) => {
     const introduction = await getIntro()
     console.log("<Introduction Fetched>")
     res.setHeader("Content-Type", "application/json")
-    res.end(JSON.stringify(introduction))
+    res.json(introduction)
 })
 
 router.get('/updates', async(req, res) => {
@@ -33,7 +33,7 @@ router.get('/updates', async(req, res) => {
     const update = await getUpdate()
     console.log("<Updated Fetched>")
     res.setHeader("Content-Type", "application/json")
-    res.end(JSON.stringify(update))
+    res.json(update)
 })
 
 router.get('/spotlights', async(req, res) => {
@@ -44,7 +44,7 @@ router.get('/spotlights', async(req, res) => {
     const spotlight = await getSpotlight()
     console.log("<Spotlight Fetched>")
     res.setHeader("Content-Type", "application/json")
-    res.end(JSON.stringify(spotlight))
+    res.json(spotlight)
 })
 
 router.get('/calls', async(req, res) => {
@@ -55,7 +55,7 @@ router.get('/calls', async(req, res) => {
     const calls = await getCalls()
     console.log("<Calls Fetched>")
     res.setHeader("Content-Type", "application/json")
-    res.end(JSON.stringify(calls))
+    res.json(calls)
 })
 
 module.exports = router;
@@ -89,7 +89,7 @@ async function getSpotlight(){
     const spotlight = results.map((page) => {       
         return{
             id: page.properties.nid.number,
-            text: page.properties.text.rich_text[0].plain_text,
+            text: page.properties.text.rich_text,
             header: page.properties.name.title[0].plain_text,
             img_url: page.properties.img_url.url,
             url: page.properties.other_link.rich_text[0].plain_text,
@@ -106,11 +106,10 @@ async function getUpdate(){
     const {results} = await notion.databases.query({
         database_id: database_update_Id,
     })
-    console.log(results)
     const updates = results.map((page) => {       
         return{
             id: page.properties.nid.number,
-            text: page.properties.text.rich_text[0].plain_text,
+            text: page.properties.text.rich_text,
             header: page.properties.name.title[0].plain_text,
             img_url: page.properties.img_url.url,
             url: page.properties.other_link.rich_text[0].plain_text,
@@ -128,11 +127,13 @@ async function getIntro(){
     const {results} = await notion.databases.query({
         database_id: database_intro_Id,
     })
+
+    console.log(results.properties)
     const info_intro = results.map((page) => {   
         
         return{
             id: page.properties.nid.number,
-            text_body: page.properties.introduction_text.rich_text[0].plain_text,
+            text_body: page.properties.introduction_text.rich_text,
             header: page.properties.name.title[0].plain_text,
             date: page.properties.date.date.start,
         }

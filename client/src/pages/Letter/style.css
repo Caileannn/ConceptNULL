@@ -56,7 +56,7 @@
 
 .weekly-image img{
   width: auto;
-  height: 400px;
+  max-height: 400px;
   border-radius:  20px;
 }
 
@@ -79,7 +79,8 @@
   font-style: normal;
   font-weight: 500;
   margin-bottom: 20px;
-
+  margin-top: 40px;
+  text-align: center;
 }
 
 .weekly-spot{
