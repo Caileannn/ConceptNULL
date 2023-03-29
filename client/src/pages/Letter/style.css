@@ -354,6 +354,12 @@
   .weekly-spot h5{
     font-size: 1rem;
   }
+
+  .weekly-image img{
+    width: auto;
+    height: 300px;
+    border-radius:  20px;
+  }
  
 
   
