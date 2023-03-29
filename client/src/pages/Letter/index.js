@@ -84,22 +84,7 @@ const [call_text, setCalls] = useState([{}])
   
   var deadlineDate;
   let news = "./newsletter.csv"
-  let currentDate = new Date();
-
-    /*
-  useEffect(()=>{
-    Papa.parse(news,{
-      download: true,
-      delimiter: ",",
-      header: true,
-      complete: ((result) => {
-        setObj(result.data);
-      })
-  });
-
-  }, [])
-
-  */ 
+  let currentDate = new Date()
  
   const mapIntroduction = introduction_text.map(elm => {
     return(
