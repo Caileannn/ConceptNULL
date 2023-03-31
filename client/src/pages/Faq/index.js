@@ -4,6 +4,9 @@ import Container from "../../components/container";
 import { BigTitle } from "../../components/Titles";
 import FaqItem from './Components/FaqItem'
 import App from '../../app.json'
+
+
+
 export default function index() {
   return (
     <Container className="faq-cont">
