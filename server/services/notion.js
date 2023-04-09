@@ -14,7 +14,7 @@ const database_update_Id = process.env.NOTION_CN_UPDATE_DB_KEY
 const database_spotlight_Id = process.env.NOTION_CN_SPOTLIGHT_DB_KEY
 const database_calls_Id = process.env.NOTION_CN_CALLS_DB_KEY
 
-router.get('/intro', async(req, res) => {
+router.get('https://conceptnull.onrender.com/api/intro', async(req, res) => {
     res.setHeader("X-Frame-Options", "ALLOWALL");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -25,7 +25,7 @@ router.get('/intro', async(req, res) => {
     res.json(introduction)
 })
 
-router.get('/updates', async(req, res) => {
+router.get('https://conceptnull.onrender.com/api/updates', async(req, res) => {
     res.setHeader("X-Frame-Options", "ALLOWALL");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -36,7 +36,7 @@ router.get('/updates', async(req, res) => {
     res.json(update)
 })
 
-router.get('/spotlights', async(req, res) => {
+router.get('https://conceptnull.onrender.com/api/spotlights', async(req, res) => {
     res.setHeader("X-Frame-Options", "ALLOWALL");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -47,7 +47,7 @@ router.get('/spotlights', async(req, res) => {
     res.json(spotlight)
 })
 
-router.get('/calls', async(req, res) => {
+router.get('https://conceptnull.onrender.com/api/calls', async(req, res) => {
     res.setHeader("X-Frame-Options", "ALLOWALL");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -61,7 +61,6 @@ router.get('/calls', async(req, res) => {
 module.exports = router;
 
 async function getCalls(){
-    console.log("Fetching...")
     const {results} = await notion.databases.query({
         database_id: database_calls_Id,
     })
@@ -82,7 +81,6 @@ async function getCalls(){
 }
 
 async function getSpotlight(){
-    console.log("Fetching...")
     const {results} = await notion.databases.query({
         database_id: database_spotlight_Id,
     })
@@ -93,7 +91,8 @@ async function getSpotlight(){
             header: page.properties.name.title[0].plain_text,
             img_url: page.properties.img_url.url,
             url: page.properties.other_link.rich_text[0].plain_text,
-            name: page.properties.name.title[0].plain_text
+            name: page.properties.name.title[0].plain_text,
+            type: page.properties.type.multi_select[0].name
         }
     })
 
@@ -102,7 +101,6 @@ async function getSpotlight(){
 }
 
 async function getUpdate(){
-    console.log("Fetching...")
     const {results} = await notion.databases.query({
         database_id: database_update_Id,
     })
@@ -128,14 +126,12 @@ async function getIntro(){
         database_id: database_intro_Id,
     })
 
-    console.log(results.properties)
-    const info_intro = results.map((page) => {   
+    const info_intro = results.map((t) => {   
         
         return{
-            id: page.properties.nid.number,
-            text_body: page.properties.introduction_text.rich_text,
-            header: page.properties.name.title[0].plain_text,
-            date: page.properties.date.date.start,
+            text_body: t.properties.introduction_text.rich_text,
+            header: t.properties.name.title[0].text.content,
+            date: t.properties.date.date.start
         }
     })
 

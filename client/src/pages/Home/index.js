@@ -26,8 +26,7 @@ export default function Index() {
       
       <div className="home-title">
           <div className="home-textHeader">
-          <h1>CONCEPT NULL</h1>
-          <h2>Newsletter Update</h2>
+          <img src="NMAN-Banner.svg" className="svg-image-logo"></img>  
         </div>
       </div>
       <div className="home-summary-cont">

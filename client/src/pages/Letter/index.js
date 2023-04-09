@@ -13,7 +13,7 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/intro", {
+    fetch("api/intro", {
     method: 'GET',
     credentials: 'same-origin',
     headers: {
@@ -31,7 +31,7 @@ const [call_text, setCalls] = useState([{}])
   
   
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/updates", {
+    fetch("api/updates", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -48,7 +48,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/spotlights").then(
+    fetch("api/spotlights").then(
       response => response.json()
     ).then(
       spotlight_res => {
@@ -58,7 +58,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/calls", {
+    fetch("api/calls", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -78,7 +78,7 @@ const [call_text, setCalls] = useState([{}])
   let testText = []
   let currentDate = new Date()
  
-  const mapIntroduction = introduction_text.map(elm => {
+  const mapIntroduction2 = introduction_text.map(elm => {
 
     testText = []
     testText = elm.text_body
@@ -99,6 +99,37 @@ const [call_text, setCalls] = useState([{}])
         </div>
    )
   }
+})
+
+
+const mapIntroduction = introduction_text.map(elm => {
+   
+  console.log(elm.text_body)
+  if(introduction_text.length > 0 && testText != null){
+  return(
+    <div className="letter-intro">
+          <span className="top-date">
+            {elm.date}
+          </span>
+          <h1 className="letter-date">{elm.header}</h1>  
+            {
+              elm.text_body.map(elm_t => {
+                console.log(elm_t.text.content)
+                if(elm_t.text.link == null){
+                  return(
+                    <p>{elm_t.text.content}</p>
+                  )
+                }else{
+                  return(
+                    <a href={elm_t.text.link.url}><p>{elm_t.text.content}</p></a>
+                  )
+                }
+                
+              })
+            }
+      </div>
+ )
+}
 })
 
 
@@ -156,6 +187,58 @@ const [call_text, setCalls] = useState([{}])
 
     
   })
+
+  const mapArticles = spotlight_text.map(elm => {
+
+     testText = []
+     testText = elm.text
+     if(spotlight_text.length > 0 && testText != null && elm.type == "article"){
+       
+     return(
+       <div className="weekly-spot">
+               <span>{elm.header}</span>
+               {
+                 testText.map(elm => {
+                   return(
+                     <p>{elm.plain_text}</p>
+                   )
+                 })
+               }
+               <a href={elm.url}><h5>Link↗</h5></a>
+               <div className="weekly-image">
+                 <img src={elm.img_url}></img>
+               </div>
+               <div className="weekly-line-break"></div>
+       </div>
+     )
+   }
+ })
+
+ const mapExhibitions = spotlight_text.map(elm => {
+
+  testText = []
+  testText = elm.text
+  if(spotlight_text.length > 0 && testText != null && elm.type == "exh"){
+    
+  return(
+    <div className="weekly-spot">
+            <span>{elm.header}</span>
+            {
+              testText.map(elm => {
+                return(
+                  <p>{elm.plain_text}</p>
+                )
+              })
+            }
+            <a href={elm.url}><h5>Link↗</h5></a>
+            <div className="weekly-image">
+              <img src={elm.img_url}></img>
+            </div>
+            <div className="weekly-line-break"></div>
+    </div>
+  )
+}
+})
   
   
   
@@ -316,30 +399,39 @@ const [call_text, setCalls] = useState([{}])
 
   return (
     <Container className="gen-cont">
+
         <div className="gen-body">
+          <div className="img-logo">
+            <img src="Logo.svg"></img>
+          </div>
+          
           {mapIntroduction}
           <div className="letter-weekly">
           {update_text.length > 0 && 
             <h1>Updates</h1>
             }
           {mapUpdates}
-          <h1>Weekly Spotlight 🔦</h1>
-          {mapSpotlights}
+          <h1>The Spotlight 🔦</h1>
+          <h1 className="spot-sub-headings">Exhibitions</h1>
+          {mapExhibitions}
+          <h1 className="spot-sub-headings">Articles</h1>
+          {mapArticles}
+          
           </div>
        <div className="addelm">
-          <h1>Open Calls📯</h1>
+          <div className="addelm-row"><h1>Open Calls </h1><h1 className="emoji">📯</h1></div>
             {mapOCList}
-          <h1>Residencies🏠</h1>
+          <div className="addelm-row"><h1>Residencies </h1><h1 className="emoji">🏠</h1></div>
             {mapRList}
-          <h1>Funding💸</h1>
+          <div className="addelm-row"><h1>Funding </h1><h1 className="emoji">💸</h1></div>
             {mapFOList}
-          <h1>Project Funding🧑‍🤝‍🧑</h1>
+          <div className="addelm-row"><h1>Project Funding </h1><h1 className="emoji">🧑‍🤝‍🧑</h1></div>
             {mapPFList}
-          <h1>Workshops⚒️</h1>
+          <div className="addelm-row"><h1>Workshops </h1><h1 className="emoji">⚒️</h1></div>
             {mapWSList}
-          <h1>Job Oppurtunities👜</h1>
+          <div className="addelm-row"><h1>Job Oppurtunities </h1><h1 className="emoji">👜</h1></div>
             {mapJOList}
-          <h1>Studio Vacancies🔓</h1>
+          <div className="addelm-row"><h1>Studio Vacancies </h1><h1 className="emoji">🔓</h1></div>
             {mapSVList}
        </div>
       </div>

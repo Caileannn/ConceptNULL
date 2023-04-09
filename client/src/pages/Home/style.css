@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+ .svg-image-logo{
+    width:700px;
+    height: auto;
+}
+
 .home-articles {
     grid-area: articles;
     flex-direction: column;
@@ -132,6 +137,10 @@ h2{
         margin-left: 2rem!important;
         margin-right: 2rem!important;
     }
+    .svg-image-logo{
+        width:400px;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 646px) {
@@ -203,6 +212,10 @@ h2{
     .home-summary-text p{
         font-size: 0.9rem;
         line-height: 20px;
+    }
+    .svg-image-logo{
+        width:250px;
+        height: auto;
     }
 }
 
