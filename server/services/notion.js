@@ -14,7 +14,7 @@ const database_update_Id = process.env.NOTION_CN_UPDATE_DB_KEY
 const database_spotlight_Id = process.env.NOTION_CN_SPOTLIGHT_DB_KEY
 const database_calls_Id = process.env.NOTION_CN_CALLS_DB_KEY
 
-router.get('https://conceptnull.onrender.com/api/intro', async(req, res) => {
+router.get('/intro', async(req, res) => {
     res.setHeader("X-Frame-Options", "ALLOWALL");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -25,7 +25,7 @@ router.get('https://conceptnull.onrender.com/api/intro', async(req, res) => {
     res.json(introduction)
 })
 
-router.get('https://conceptnull.onrender.com/api/updates', async(req, res) => {
+router.get('/updates', async(req, res) => {
     res.setHeader("X-Frame-Options", "ALLOWALL");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -36,7 +36,7 @@ router.get('https://conceptnull.onrender.com/api/updates', async(req, res) => {
     res.json(update)
 })
 
-router.get('https://conceptnull.onrender.com/api/spotlights', async(req, res) => {
+router.get('/spotlights', async(req, res) => {
     res.setHeader("X-Frame-Options", "ALLOWALL");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
@@ -47,7 +47,7 @@ router.get('https://conceptnull.onrender.com/api/spotlights', async(req, res) =>
     res.json(spotlight)
 })
 
-router.get('https://conceptnull.onrender.com/api/calls', async(req, res) => {
+router.get('/calls', async(req, res) => {
     res.setHeader("X-Frame-Options", "ALLOWALL");
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, GET");
