@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "nodemon server.js",
+    "start": "nodemon server.js",
     "build": "npm i",
     "server": "nodemon server.js",
     "test": "react-scripts test",

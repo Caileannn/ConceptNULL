@@ -13,7 +13,7 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/intro", {
+    fetch("api/intro", {
     method: 'GET',
     credentials: 'same-origin',
     headers: {
@@ -31,7 +31,7 @@ const [call_text, setCalls] = useState([{}])
   
   
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/updates", {
+    fetch("api/updates", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -48,7 +48,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/spotlights").then(
+    fetch("api/spotlights").then(
       response => response.json()
     ).then(
       spotlight_res => {
@@ -58,7 +58,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/calls", {
+    fetch("api/calls", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -74,7 +74,6 @@ const [call_text, setCalls] = useState([{}])
   )}, [] )
   
   var deadlineDate;
-  let news = "./newsletter.csv"
   let testText = []
   let currentDate = new Date()
  
@@ -213,6 +212,32 @@ const mapIntroduction = introduction_text.map(elm => {
      )
    }
  })
+
+ const mapPerformances = spotlight_text.map(elm => {
+
+  testText = []
+  testText = elm.text
+  if(spotlight_text.length > 0 && testText != null && elm.type == "performance"){
+    
+  return(
+    <div className="weekly-spot">
+            <span>{elm.header}</span>
+            {
+              testText.map(elm => {
+                return(
+                  <p>{elm.plain_text}</p>
+                )
+              })
+            }
+            <a href={elm.url}><h5>Link↗</h5></a>
+            <div className="weekly-image">
+              <img src={elm.img_url}></img>
+            </div>
+            <div className="weekly-line-break"></div>
+    </div>
+  )
+}
+})
 
  const mapExhibitions = spotlight_text.map(elm => {
 
@@ -414,6 +439,8 @@ const mapIntroduction = introduction_text.map(elm => {
           <h1>The Spotlight 🔦</h1>
           <h1 className="spot-sub-headings">Exhibitions</h1>
           {mapExhibitions}
+          <h1 className="spot-sub-headings">Performances</h1>
+          {mapPerformances}
           <h1 className="spot-sub-headings">Articles</h1>
           {mapArticles}
           
