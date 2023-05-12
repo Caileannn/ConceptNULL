@@ -58,7 +58,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("api/calls", {
+    fetch("https://conceptnull.onrender.com/api/calls", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
