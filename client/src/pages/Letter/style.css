@@ -239,10 +239,9 @@ a {
 
 .obj-row{
   display: flex;
-  flex-direction: row;
-  align-items: left;
-  gap: 20px;
-  justify-content: left;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: right;
 }
 
 .line-break{
@@ -291,7 +290,7 @@ a {
   
   .obj-row{
     justify-content:left;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     margin-top: 20px;
     margin-bottom: 20px;

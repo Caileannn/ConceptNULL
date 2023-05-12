@@ -13,7 +13,7 @@ const [call_text, setCalls] = useState([{}])
 
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/intro", {
+    fetch("api/intro", {
     method: 'GET',
     credentials: 'same-origin',
     headers: {
@@ -31,7 +31,7 @@ const [call_text, setCalls] = useState([{}])
   
   
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/updates", {
+    fetch("api/updates", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -48,7 +48,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/spotlights").then(
+    fetch("api/spotlights").then(
       response => response.json()
     ).then(
       spotlight_res => {
@@ -58,7 +58,7 @@ const [call_text, setCalls] = useState([{}])
   }, [])
 
   useEffect(() =>{
-    fetch("https://conceptnull.onrender.com/api/calls", {
+    fetch("api/calls", {
       method: 'GET',
       credentials: 'same-origin',
       headers: {
@@ -276,14 +276,13 @@ const mapIntroduction = introduction_text.map(elm => {
      if(deadlineDate >= currentDate){
        return(
        <div className="obj">
-           <h2>{elm.header}</h2>
+           <h3>{elm.header}</h3>
            <div className="obj-row">
-             <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-             <h4>{elm.location}</h4>
-             <h3>{elm.keyword}</h3>
+             <p><b>Deadline: </b><i>{elm.deadline}</i></p>
+             <i><p>{elm.location}</p></i>
            </div>
            <p>{elm.text}</p>
-           <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+           <a href={elm.url} target="_blank"><p>Link 🡥</p></a>
            <div className="line-break"></div>
          </div>
          )}
@@ -297,14 +296,13 @@ const mapIntroduction = introduction_text.map(elm => {
        if(deadlineDate >= currentDate){
          return(
          <div className="obj">
-             <h2>{elm.header}</h2>
+             <h3>{elm.header}</h3>
              <div className="obj-row">
-               <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-               <h4>{elm.location}</h4>
-               <h3>{elm.keyword}</h3>
+               <p><b>Deadline: </b><i>{elm.deadline}</i></p>
+               <i><p>{elm.location}</p></i>
              </div>
              <p>{elm.text}</p>
-             <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+             <a href={elm.url} target="_blank"><p>Link↗</p></a>
              <div className="line-break"></div>
            </div>
            )}
@@ -318,14 +316,13 @@ const mapIntroduction = introduction_text.map(elm => {
        if(deadlineDate >= currentDate){
          return(
          <div className="obj">
-             <h2>{elm.header}</h2>
+             <h3>{elm.header}</h3>
              <div className="obj-row">
-               <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-               <h4>{elm.location}</h4>
-               <h3>{elm.keyword}</h3>
+               <p><b>Deadline: </b><i>{elm.deadline}</i></p>
+               <i><p>{elm.location}</p></i>
              </div>
              <p>{elm.text}</p>
-             <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+             <a href={elm.url} target="_blank"><p>Link↗</p></a>
              <div className="line-break"></div>
            </div>
            )}
@@ -339,14 +336,13 @@ const mapIntroduction = introduction_text.map(elm => {
        if(deadlineDate >= currentDate){
          return(
          <div className="obj">
-             <h2>{elm.header}</h2>
+             <h3>{elm.header}</h3>
              <div className="obj-row">
-               <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-               <h4>{elm.location}</h4>
-               <h3>{elm.keyword}</h3>
+               <p><b>Deadline: </b><i>{elm.deadline}</i></p>
+               <i><p>{elm.location}</p></i>
              </div>
              <p>{elm.text}</p>
-             <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+             <a href={elm.url} target="_blank"><p>Link↗</p></a>
              <div className="line-break"></div>
            </div>
            )}
@@ -360,14 +356,13 @@ const mapIntroduction = introduction_text.map(elm => {
        if(deadlineDate >= currentDate){
          return(
          <div className="obj">
-             <h2>{elm.header}</h2>
+             <h3>{elm.header}</h3>
              <div className="obj-row">
-               <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-               <h4>{elm.location}</h4>
-               <h3>{elm.keyword}</h3>
+               <p><b>Deadline: </b><i>{elm.deadline}</i></p>
+               <i><p>{elm.location}</p></i>
              </div>
              <p>{elm.text}</p>
-             <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+             <a href={elm.url} target="_blank"><p>Link↗</p></a>
              <div className="line-break"></div>
            </div>
            )}
@@ -381,14 +376,13 @@ const mapIntroduction = introduction_text.map(elm => {
        if(deadlineDate >= currentDate){
          return(
          <div className="obj">
-             <h2>{elm.header}</h2>
+             <h3>{elm.header}</h3>
              <div className="obj-row">
-               <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-               <h4>{elm.location}</h4>
-               <h3>{elm.keyword}</h3>
+               <p><b>Deadline: </b><i>{elm.deadline}</i></p>
+               <i><p>{elm.location}</p></i>
              </div>
              <p>{elm.text}</p>
-             <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+             <a href={elm.url} target="_blank"><p>Link↗</p></a>
              <div className="line-break"></div>
            </div>
            )}
@@ -402,14 +396,13 @@ const mapIntroduction = introduction_text.map(elm => {
        if(deadlineDate >= currentDate){
          return(
          <div className="obj">
-             <h2>{elm.header}</h2>
+             <h3>{elm.header}</h3>
              <div className="obj-row">
-               <h3><b>Deadline: </b><i>{elm.deadline}</i></h3>
-               <h4>{elm.location}</h4>
-               <h3>{elm.keyword}</h3>
+               <p><b>Deadline: </b><i>{elm.deadline}</i></p>
+               <i><p>{elm.location}</p></i>
              </div>
              <p>{elm.text}</p>
-             <a href={elm.url} target="_blank"><h5>Link↗</h5></a>
+             <a href={elm.url} target="_blank"><p>Link↗</p></a>
              <div className="line-break"></div>
            </div>
            )}
@@ -436,7 +429,7 @@ const mapIntroduction = introduction_text.map(elm => {
             <h1>Updates</h1>
             }
           {mapUpdates}
-          <h1>The Spotlight 🔦</h1>
+          <h2>The Spotlight 🔦</h2>
           <h1 className="spot-sub-headings">Exhibitions</h1>
           {mapExhibitions}
           <h1 className="spot-sub-headings">Performances</h1>
@@ -446,19 +439,19 @@ const mapIntroduction = introduction_text.map(elm => {
           
           </div>
        <div className="addelm">
-          <div className="addelm-row"><h1>Open Calls </h1><h1 className="emoji">📯</h1></div>
+          <div className="addelm-row"><h2>Open Calls </h2><h2 className="emoji">📯</h2></div>
             {mapOCList}
-          <div className="addelm-row"><h1>Residencies </h1><h1 className="emoji">🏠</h1></div>
+          <div className="addelm-row"><h2>Residencies </h2><h2 className="emoji">🏠</h2></div>
             {mapRList}
-          <div className="addelm-row"><h1>Funding </h1><h1 className="emoji">💸</h1></div>
+          <div className="addelm-row"><h2>Funding </h2><h2 className="emoji">💸</h2></div>
             {mapFOList}
-          <div className="addelm-row"><h1>Project Funding </h1><h1 className="emoji">🧑‍🤝‍🧑</h1></div>
+          <div className="addelm-row"><h2>Project Funding </h2><h2 className="emoji">🧑‍🤝‍🧑</h2></div>
             {mapPFList}
-          <div className="addelm-row"><h1>Workshops </h1><h1 className="emoji">⚒️</h1></div>
+          <div className="addelm-row"><h2>Workshops </h2><h2 className="emoji">⚒️</h2></div>
             {mapWSList}
-          <div className="addelm-row"><h1>Job Oppurtunities </h1><h1 className="emoji">👜</h1></div>
+          <div className="addelm-row"><h2>Job Oppurtunities </h2><h2 className="emoji">👜</h2></div>
             {mapJOList}
-          <div className="addelm-row"><h1>Studio Vacancies </h1><h1 className="emoji">🔓</h1></div>
+          <div className="addelm-row"><h2>Studio Vacancies </h2><h2 className="emoji">🔓</h2></div>
             {mapSVList}
        </div>
       </div>

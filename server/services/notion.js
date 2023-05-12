@@ -72,7 +72,6 @@ async function getCalls(){
             url: page.properties.url.url,
             location: page.properties.location.rich_text[0].plain_text,        
             text: page.properties.text.rich_text[0].plain_text,
-            keywords: page.properties.keywords.rich_text[0].plain_text,
             header: page.properties.title.title[0].plain_text
         }
     })
